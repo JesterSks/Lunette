@@ -18,11 +18,15 @@
   (:use #:common-lisp
         #:cffi
         #:alexandria)
-  (:export #:LPVOID
+  (:export #:PVOID
+           #:LPVOID
+           #:LPCVOID
+           #:HANDLE
            #:WNDPROC
            #:HGDIOBJ
            #:HINSTANCE
            #:HMODULE
+           #:HLOCAL
            #:HICON
            #:HCURSOR
            #:HBRUSH
@@ -35,10 +39,11 @@
            #:DWORD
            #:BOOL
            #:W32-ATOM
+           #:LPTSTR
            #:LPCSTR
            #:LPCTSTR
            #:LPCWSTR
-
+           #:va_list
 
            #:IDI_APPLICATION
            #:IDI_HAND
@@ -383,6 +388,12 @@
            #:WM_USER
            #:WM_APP
 
+           #:FORMAT_MESSAGE_ALLOCATE_BUFFER
+           #:FORMAT_MESSAGE_FROM_SYSTEM
+           #:FORMAT_MESSAGE_IGNORE_INSERTS
+
+           #:ERROR_CLASS_ALREADY_EXISTS
+
            #:POINT
            #:x
            #:y
@@ -427,4 +438,11 @@
            #:DefWindowProc
 
            #:register-class
-           #:create-window-ex))
+           #:create-window-ex
+
+           #:GetLastError
+           #:LocalFree
+           #:FormatMessage
+
+           #:get-win-error-str
+           #:get-last-error))

@@ -382,3 +382,10 @@
 (define-constant WM_PENWINLAST                     #x038F)
 (define-constant WM_USER                           #x0400)
 (define-constant WM_APP                            #x8000)
+
+(define-constant FORMAT_MESSAGE_ALLOCATE_BUFFER #x00000100)
+(define-constant FORMAT_MESSAGE_FROM_SYSTEM     #x00001000)
+(define-constant FORMAT_MESSAGE_IGNORE_INSERTS  #x00000200)
+
+
+(define-constant ERROR_CLASS_ALREADY_EXISTS     1410)

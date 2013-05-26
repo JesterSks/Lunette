@@ -74,6 +74,39 @@
   (wparam WPARAM)
   (lparam LPARAM))
 
+(defcfun "GetLastError" DWORD)
+
+(defcfun "LocalFree" HLOCAL
+  (hMem HLOCAL))
+
+(defcfun ("FormatMessageW" FormatMessage) DWORD
+  (dwFlags      DWORD)
+  (lpSource     LPCVOID)
+  (dwMessageId  DWORD)
+  (dwLanguageId DWORD)
+  (lpBuffer     LPTSTR)
+  (nSize        DWORD)
+  (Arguments    va_list))
+
+(defun get-win-error-str (err)
+  (with-foreign-object (lpMsgBuf 'LPVOID)
+                       (FormatMessage (logior FORMAT_MESSAGE_ALLOCATE_BUFFER
+                                              FORMAT_MESSAGE_FROM_SYSTEM
+                                              FORMAT_MESSAGE_IGNORE_INSERTS)
+                                      (null-pointer)
+                                      err
+                                      0
+                                      lpMsgBuf
+                                      0
+                                      (null-pointer))
+                       (let ((lisp-str (foreign-string-to-lisp (mem-ref lpMsgBuf 'LPVOID) :encoding :utf-16le)))
+                         (LocalFree (mem-ref lpMsgBuf 'LPVOID))
+                         lisp-str)))
+
+(defun get-last-error ()
+  (let ((last-error (GetLastError)))
+    (values last-error (get-win-error-str last-error))))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))
@@ -98,7 +131,15 @@
                                                    (foreign-slot-value wc 'WNDCLASS 'hbrBackground) hbrBackground
                                                    (foreign-slot-value wc 'WNDCLASS 'lpszMenuName)  lpszMenuName
                                                    (foreign-slot-value wc 'WNDCLASS 'lpszClassName) cclass-name)
-                                             (RegisterClass wc))))
+                                             (let ((result-atom (RegisterClass wc)))
+                                               (when (eql 0 result-atom)
+                                                 (multiple-value-bind (error-code error-msg) (get-last-error)
+                                                   (unless (eql error-code ERROR_CLASS_ALREADY_EXISTS)
+                                                     (error "Error registering window class ~s: ~d (~a)"
+                                                            class-name
+                                                            error-code
+                                                            error-msg))))
+                                               result-atom))))
 
 (defun create-window-ex (class-name title &key
                                     (dwExStyle  0)
@@ -113,15 +154,22 @@
                                     (lpParam    (null-pointer)))
   (with-foreign-strings ((ctitle title)
                          (cclass-name class-name))
-                        (CreateWindowEx dwExStyle
-                                        cclass-name
-                                        ctitle
-                                        dwStyle
-                                        x
-                                        y
-                                        nWidth
-                                        nHeight
-                                        hWndParent
-                                        hMenu
-                                        hInstance
-                                        lpParam)))
+                        (let ((hwnd (CreateWindowEx dwExStyle
+                                                    cclass-name
+                                                    ctitle
+                                                    dwStyle
+                                                    x
+                                                    y
+                                                    nWidth
+                                                    nHeight
+                                                    hWndParent
+                                                    hMenu
+                                                    hInstance
+                                                    lpParam)))
+                          (when (null-pointer-p hwnd)
+                            (multiple-value-bind (error-code error-msg) (get-last-error)
+                              (error "CreateWindowEx failed creating window instance ~s: ~d (~a)"
+                                     title
+                                     error-code
+                                     error-msg)))
+                          hwnd)))

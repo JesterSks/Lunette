@@ -16,19 +16,24 @@
 
 (in-package :Lunette)
 
+(defctype PVOID   :pointer)
 (defctype LPVOID  :pointer)
+(defctype LPCVOID :pointer)
+(defctype HANDLE  PVOID)
+
 (defctype WNDPROC :pointer)
 
-(defctype HGDIOBJ :pointer)
+(defctype HGDIOBJ HANDLE)
 
 (defctype HINSTANCE :pointer)
 (defctype HMODULE   HINSTANCE)
 
-(defctype HICON   :pointer)
-(defctype HCURSOR :pointer)
-(defctype HBRUSH  :pointer)
-(defctype HWND    :pointer)
-(defctype HMENU   :pointer)
+(defctype HLOCAL  HANDLE)
+(defctype HICON   HANDLE)
+(defctype HCURSOR HANDLE)
+(defctype HBRUSH  HANDLE)
+(defctype HWND    HANDLE)
+(defctype HMENU   HANDLE)
 
 (defctype WPARAM  :unsigned-int)
 (defctype LPARAM  :long)
@@ -40,6 +45,9 @@
 
 (defctype W32-ATOM WORD)
 
+(defctype LPTSTR  :string)
 (defctype LPCSTR  :string)
 (defctype LPCTSTR LPCSTR)
 (defctype LPCWSTR :string)
+
+(defctype va_list :pointer)

@@ -16,7 +16,10 @@
 
 (in-package :Lunette)
 
+(define-foreign-library kernel32
+  (:windows "kernel32.dll"))
 (define-foreign-library user32
   (:windows "user32.dll"))
 
+(use-foreign-library kernel32)
 (use-foreign-library user32)
