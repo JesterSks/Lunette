@@ -26,6 +26,7 @@
            #:HGDIOBJ
            #:HINSTANCE
            #:HMODULE
+           #:HDC
            #:HLOCAL
            #:HICON
            #:HCURSOR
@@ -394,6 +395,14 @@
 
            #:ERROR_CLASS_ALREADY_EXISTS
 
+           #:RECT
+           #:left
+           #:top
+           #:right
+           #:bottom
+           #:PRECT
+           #:LPRECT
+
            #:POINT
            #:x
            #:y
@@ -423,6 +432,15 @@
            #:PMSG
            #:LPMSG
 
+           #:PAINTSTRUCT
+           #:hdc
+           #:fErase
+           #:rcPaint
+           #:fRestore
+           #:fIncUpdate
+           #:rgbReserved
+           #:LPPAINTSTRUCT
+
            #:RegisterClass
            #:GetModuleHandle
            #:LoadIcon
@@ -445,4 +463,10 @@
            #:FormatMessage
 
            #:get-win-error-str
-           #:get-last-error))
+           #:get-last-error
+
+           #:BeginPaint
+           #:EndPaint
+           #:with-ps
+           #:TextOut
+           #:text-out))

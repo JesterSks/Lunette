@@ -28,6 +28,7 @@
 (defctype HINSTANCE :pointer)
 (defctype HMODULE   HINSTANCE)
 
+(defctype HDC     HANDLE)
 (defctype HLOCAL  HANDLE)
 (defctype HICON   HANDLE)
 (defctype HCURSOR HANDLE)

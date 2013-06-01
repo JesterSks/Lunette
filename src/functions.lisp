@@ -173,3 +173,29 @@
                                      error-code
                                      error-msg)))
                           hwnd)))
+
+(defcfun "BeginPaint" HDC
+  (hWnd HWND)
+  (lpPaint LPPAINTSTRUCT))
+
+(defcfun "EndPaint" BOOL
+  (hWnd HWND)
+  (lpPaint (:pointer PAINTSTRUCT)))
+
+(defmacro with-ps (ps hdc hWnd &body body)
+  `(with-foreign-object (,ps 'PAINTSTRUCT)
+                        (let ((,hdc (BeginPaint ,hWnd ,ps)))
+                          (unwind-protect
+                              (progn ,@body)
+                            (EndPaint ,hWnd ,ps)))))
+
+(defcfun ("TextOutW" TextOut) BOOL
+  (hdc HDC)
+  (nXStart :int)
+  (nYStart :int)
+  (lpString LPCTSTR)
+  (cchString :int))
+
+(defun text-out (hdc x y str)
+  (with-foreign-string (cstr str)
+                       (TextOut hdc x y cstr (length str))))

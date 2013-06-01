@@ -16,6 +16,16 @@
 
 (in-package :Lunette)
 
+(defcstruct _RECT
+  (left   :long)
+  (top    :long)
+  (right  :long)
+  (bottom :long))
+
+(defctype RECT   (:struct _RECT))
+(defctype PRECT  (:pointer RECT))
+(defctype LPRECT (:pointer RECT))
+
 (defcstruct tagPOINT
   (x :long)
   (y :long))
@@ -50,3 +60,14 @@
 (defctype MSG   (:struct tagMSG))
 (defctype PMSG  (:pointer MSG))
 (defctype LPMSG (:pointer MSG))
+
+(defcstruct tagPAINTSTRUCT
+  (hdc         HDC)
+  (fErase      BOOL)
+  (rcPaint     RECT)
+  (fRestore    BOOL)
+  (fIncUpdate  BOOL)
+  (rgbReserved :int8 :count 32))
+
+(defctype PAINTSTRUCT (:struct tagPAINTSTRUCT))
+(defctype LPPAINTSTRUCT (:pointer PAINTSTRUCT))
