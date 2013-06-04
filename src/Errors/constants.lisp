@@ -14,4 +14,10 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.Errors)
+
+(define-constant FORMAT_MESSAGE_ALLOCATE_BUFFER #x00000100)
+(define-constant FORMAT_MESSAGE_FROM_SYSTEM     #x00001000)
+(define-constant FORMAT_MESSAGE_IGNORE_INSERTS  #x00000200)
+
+(define-constant ERROR_CLASS_ALREADY_EXISTS     1410)

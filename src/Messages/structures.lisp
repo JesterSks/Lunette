@@ -14,4 +14,16 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.Messages)
+
+(defcstruct tagMSG
+  (hwnd    HWND)
+  (message :UINT)
+  (wParam  WPARAM)
+  (lParam  LPARAM)
+  (time    DWORD)
+  (pt      POINT))
+
+(defctype MSG   (:struct tagMSG))
+(defctype PMSG  (:pointer MSG))
+(defctype LPMSG (:pointer MSG))

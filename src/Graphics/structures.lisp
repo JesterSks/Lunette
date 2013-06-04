@@ -14,4 +14,25 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.Graphics)
+
+(defcstruct _RECT
+  (left   :long)
+  (top    :long)
+  (right  :long)
+  (bottom :long))
+
+(defctype RECT   (:struct _RECT))
+(defctype PRECT  (:pointer RECT))
+(defctype LPRECT (:pointer RECT))
+
+(defcstruct tagPAINTSTRUCT
+  (hdc         HDC)
+  (fErase      BOOL)
+  (rcPaint     RECT)
+  (fRestore    BOOL)
+  (fIncUpdate  BOOL)
+  (rgbReserved :int8 :count 32))
+
+(defctype PAINTSTRUCT (:struct tagPAINTSTRUCT))
+(defctype LPPAINTSTRUCT (:pointer PAINTSTRUCT))

@@ -14,4 +14,12 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.Resources)
+
+(defcfun ("LoadIconW" LoadIcon) HICON
+  (hInstance  HINSTANCE)
+  (lpIconName LPCTSTR))
+
+(defcfun ("LoadCursorW" LoadCursor) HCURSOR
+  (hInstance    HINSTANCE)
+  (lpCursorName LPCTSTR))

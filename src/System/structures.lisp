@@ -14,4 +14,12 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.System)
+
+(defcstruct tagPOINT
+  (x :long)
+  (y :long))
+
+(defctype POINT   (:struct tagPOINT))
+(defctype PPOINT  (:pointer POINT))
+(defctype LPPOINT (:pointer POINT))

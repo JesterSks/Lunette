@@ -29,11 +29,52 @@
   :depends-on (:cffi
                :alexandria)
   :components
-  ((:module "src"
+  ((:module "src/System"
             :components
             ((:file "package")
-             (:file "libraries"   :depends-on ("package"))
              (:file "definitions" :depends-on ("package"))
-             (:file "constants"   :depends-on ("package"))
              (:file "structures"  :depends-on ("package" "definitions"))
-             (:file "functions"   :depends-on ("package" "definitions" "structures" "libraries"))))))
+             (:file "functions"   :depends-on ("package" "definitions" "structures"))))
+   (:module "src/Memory"
+            :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "functions"   :depends-on ("package"))))
+   (:module "src/Errors"
+            :depends-on ("src/Memory" "src/System")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "functions"   :depends-on ("package"))))
+   (:module "src/Resources"
+            :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "functions"   :depends-on ("package"))))
+   (:module "src/Messages"
+            :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "structures"  :depends-on ("package"))
+             (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src/Graphics"
+            :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "structures"  :depends-on ("package"))
+             (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src/Windows"
+            :depends-on ("src/System" "src/Resources" "src/Graphics")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "structures"  :depends-on ("package"))
+             (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src"
+            :depends-on ("src/Messages" "src/Windows" "src/Graphics")
+            :components
+            ((:file "package")
+             (:file "libraries"   :depends-on ("package"))))))

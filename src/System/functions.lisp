@@ -14,4 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.System)
+
+(defcfun ("GetModuleHandleW" GetModuleHandle) HMODULE
+  (lpModuleName lpctstr))

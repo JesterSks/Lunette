@@ -14,4 +14,19 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.Windows)
+
+(defcstruct tagWNDCLASS
+  (style         :UINT)
+  (lpfnWndProc   WNDPROC)
+  (cbClsExtra    :INT)
+  (cbWndExtra    :INT)
+  (hInstance     HINSTANCE)
+  (hIcon         HICON)
+  (hCursor       HCURSOR)
+  (hbrBackground HBRUSH)
+  (lpszMenuName  LPCWSTR)
+  (lpszClassName LPCWSTR))
+
+(defctype WNDCLASS  (:struct tagWNDCLASS))
+(defctype PWNDCLASS (:pointer WNDCLASS))

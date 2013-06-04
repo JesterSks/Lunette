@@ -14,4 +14,18 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(in-package :Lunette.Messages)
+
+(defcfun ("GetMessageW" GetMessage) BOOL
+  (lpMsg         LPMSG)
+  (hWnd          HWND)
+  (wMsgFilterMin :UINT)
+  (wMsgFilterMax :UINT))
+
+(defcfun "TranslateMessage" BOOL
+  (lpMsg LPMSG))
+
+(defcfun ("DispatchMessageW" DispatchMessage) LRESULT
+  (lpmsg LPMSG))
+
+(defcfun "PostQuitMessage" :void (nExitCode :int))

@@ -14,4 +14,10 @@
    limitations under the License.
 |#
 
-(in-package :Lunette)
+(defpackage :Lunette.Memory
+  (:use #:common-lisp)
+  (:import-from :cffi
+                #:defcfun)
+  (:import-from :Lunette.System
+                #:HLOCAL)
+  (:export #:LocalFree))
