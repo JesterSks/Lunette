@@ -27,6 +27,7 @@
 (defctype HICON   HANDLE)
 (defctype HCURSOR HANDLE)
 (defctype HBRUSH  HANDLE)
+(defctype HPEN    HANDLE)
 (defctype HWND    HANDLE)
 (defctype HMENU   HANDLE)
 
@@ -49,5 +50,8 @@
 (defctype LPCSTR  :string)
 (defctype LPCTSTR LPCSTR)
 (defctype LPCWSTR :string)
+
+(defctype COLORREF   DWORD)
+(defctype LPCOLORREF :pointer)
 
 (defctype va_list :pointer)

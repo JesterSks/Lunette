@@ -31,6 +31,7 @@
            #:HICON
            #:HCURSOR
            #:HBRUSH
+           #:HPEN
            #:HWND
            #:HMENU
 
@@ -53,6 +54,9 @@
            #:LPCSTR
            #:LPCTSTR
            #:LPCWSTR
+
+           #:COLORREF
+           #:LPCOLORREF
 
            #:va_list
 

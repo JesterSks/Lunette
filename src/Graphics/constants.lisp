@@ -38,3 +38,24 @@
 (define-constant DC_BRUSH            18)
 (define-constant DC_PEN              19)
 (define-constant STOCK_LAST          19)
+
+;;; Brush hash styles
+(define-constant HS_HORIZONTAL  0) ; -----
+(define-constant HS_VERTICAL    1) ; |||||
+(define-constant HS_FDIAGONAL   2) ; \\\\\
+(define-constant HS_BDIAGONAL   3) ; /////
+(define-constant HS_CROSS       4) ; +++++
+(define-constant HS_DIAGCROSS   5) ; xxxxx
+(define-constant HS_API_MAX    12)
+
+;;; Pen styles
+(define-constant PS_SOLID                0)
+(define-constant PS_DASH                 1) ; -------
+(define-constant PS_DOT                  2) ; .......
+(define-constant PS_DASHDOT              3) ; _._._._
+(define-constant PS_DASHDOTDOT           4) ; _.._.._
+(define-constant PS_NULL                 5)
+(define-constant PS_INSIDEFRAME          6)
+(define-constant PS_USERSTYLE            7)
+(define-constant PS_ALTERNATE            8)
+(define-constant PS_STYLE_MASK  #x0000000F)

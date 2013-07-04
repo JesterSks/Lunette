@@ -47,6 +47,25 @@
            #:DC_PEN
            #:STOCK_LAST
 
+           #:HS_HORIZONTAL
+           #:HS_VERTICAL
+           #:HS_FDIAGONAL
+           #:HS_BDIAGONAL
+           #:HS_CROSS
+           #:HS_DIAGCROSS
+           #:HS_API_MAX
+
+           #:PS_SOLID
+           #:PS_DASH
+           #:PS_DOT
+           #:PS_DASHDOT
+           #:PS_DASHDOTDOT
+           #:PS_NULL
+           #:PS_INSIDEFRAME
+           #:PS_USERSTYLE
+           #:PS_ALTERNATE
+           #:PS_STYLE_MASK
+
            #:RECT
            #:left
            #:top
@@ -69,4 +88,10 @@
            #:EndPaint
            #:with-ps
            #:TextOut
-           #:text-out))
+           #:text-out
+           #:CreateSolidBrush
+           #:CreateHatchBrush
+           #:CreatePen
+           #:SelectObject
+           #:DeleteObject
+           #:RGB))

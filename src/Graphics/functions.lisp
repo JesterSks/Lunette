@@ -44,3 +44,27 @@
 (defun text-out (hdc x y str)
   (with-foreign-string (cstr str)
                        (TextOut hdc x y cstr (length str))))
+
+(defcfun "CreateSolidBrush" HBRUSH
+  (crColor COLORREF))
+
+(defcfun "CreateHatchBrush" HBRUSH
+  (fnStyle :int)
+  (clrref COLORREF))
+
+(defcfun "CreatePen" HPEN
+  (fnPenStyle :int)
+  (nWidth     :int)
+  (crColor    COLORREF))
+
+(defcfun "SelectObject" HGDIOBJ
+  (hdc HDC)
+  (hgdiobj HGDIOBJ))
+
+(defcfun "DeleteObject" BOOL
+  (hObject HGDIOBJ))
+
+(defun RGB (r g b)
+  (logior (ash b 16)
+          (ash g 8)
+          r))
