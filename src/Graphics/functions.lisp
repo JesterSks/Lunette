@@ -68,3 +68,155 @@
   (logior (ash b 16)
           (ash g 8)
           r))
+
+(defcfun "GetPixel" COLORREF
+  (hdc   HDC)
+  (nXPos :int)
+  (nYPos :int))
+
+(defcfun "SetPixel" COLORREF
+  (hdc     HDC)
+  (X       :int)
+  (Y       :int)
+  (crColor COLORREF))
+
+(defcfun "MoveToEx" BOOL
+  (hdc     HDC)
+  (X       :int)
+  (Y       :int)
+  (lpPoint LPPOINT))
+
+(defcfun "GetCurrentPositionEx" BOOL
+  (hdc     HDC)
+  (lpPoint LPPOINT))
+
+(defcfun "LineTo" BOOL
+  (hdc   HDC)
+  (nXEnd :int)
+  (nYEnd :int))
+
+(defcfun "Polyline" BOOL
+  (hdc    HDC)
+  (lppt   (:pointer POINT))
+  (cPoints :int))
+
+(defcfun "PolylineTo" BOOL
+  (hdc    HDC)
+  (lppt   (:pointer POINT))
+  (cPoints DWORD))
+
+(defcfun "PolyPolyline" BOOL
+  (hdc            HDC)
+  (lppt           (:pointer POINT))
+  (lpdwPolyPoints DWORD)
+  (cCount         DWORD))
+
+(defcfun "Arc" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int)
+  (nXStartArc  :int)
+  (nYStartArc  :int)
+  (nXEndArc    :int)
+  (nYEndArc    :int))
+
+((defcfun "AngleArc" BOOL
+   (hdc         HDC)
+   (X           :int)
+   (Y           :int)
+   (dwRadius    DWORD)
+   (eStartAngle :float)
+   (eSweepAngle :float)))
+
+(defcfun "ArcTo" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int)
+  (nXRadial1   :int)
+  (nYRadial1   :int)
+  (nXRadial2   :int)
+  (nYRadial2   :int))
+
+(defcfun "PolyBezier" BOOL
+  (hdc     HDC)
+  (lppt    (:pointer POINT))
+  (cPoints DWORD))
+
+(defcfun "PolyBezierTo" BOOL
+  (hdc     HDC)
+  (lppt    (:pointer POINT))
+  (cCount  DWORD))
+
+(defcfun "PolyDraw" BOOL
+  (hdc      HDC)
+  (lppt     (:pointer POINT))
+  (lpbTypes (:pointer BYTE))
+  (cCount   :int))
+
+(defcfun "Rectangle" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int))
+
+(defcfun "Ellipse" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int))
+
+(defcfun "RoundRect" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int)
+  (nWidth      :int)
+  (nHeight     :int))
+
+(defcfun "Pie" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int)
+  (nXRadial1   :int)
+  (nYRadial1   :int)
+  (nXRadial2   :int)
+  (nYRadial2   :int))
+
+(defcfun "Chord" BOOL
+  (hdc         HDC)
+  (nLeftRect   :int)
+  (nTopRect    :int)
+  (nRightRect  :int)
+  (nBottomRect :int)
+  (nXRadial1   :int)
+  (nYRadial1   :int)
+  (nXRadial2   :int)
+  (nYRadial2   :int))
+
+(defcfun "SetBkColor" COLORREF
+  (hdc     HDC)
+  (crColor COLORREF))
+
+(defcfun "SetBkMode" :int
+  (hdc     HDC)
+  (iBkMode :int))
+
+(defcfun "SetROP2" :int
+  (hdc        HDC)
+  (fnDrawMode :int))
+
+(defcfun "GetROP2" :int
+  (hdc HDC))
+
+(defcfun "SetPolyFillMode" :int
+  (hdc           HDC)
+  (iPolyFillMode :int))

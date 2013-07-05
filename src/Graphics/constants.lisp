@@ -59,3 +59,32 @@
 (define-constant PS_USERSTYLE            7)
 (define-constant PS_ALTERNATE            8)
 (define-constant PS_STYLE_MASK  #x0000000F)
+
+;;; Binary raster operations
+(define-constant R2_BLACK        1)  ; 0
+(define-constant R2_NOTMERGEPEN  2)  ; DPon
+(define-constant R2_MASKNOTPEN   3)  ; DPna
+(define-constant R2_NOTCOPYPEN   4)  ; PN
+(define-constant R2_MASKPENNOT   5)  ; PDna
+(define-constant R2_NOT          6)  ; Dn
+(define-constant R2_XORPEN       7)  ; DPx
+(define-constant R2_NOTMASKPEN   8)  ; DPan
+(define-constant R2_MASKPEN      9)  ; DPa
+(define-constant R2_NOTXORPEN   10)  ; DPxn
+(define-constant R2_NOP         11)  ; D
+(define-constant R2_MERGENOTPEN 12)  ; DPno
+(define-constant R2_COPYPEN     13)  ; P
+(define-constant R2_MERGEPENNOT 14)  ; PDno
+(define-constant R2_MERGEPEN    15)  ; DPo
+(define-constant R2_WHITE       16)  ; 1
+(define-constant R2_LAST        16)
+
+;;; Background modes
+(define-constant TRANSPARENT 1)
+(define-constant OPAQUE      2)
+(define-constant BKMODE_LAST 2)
+
+;;; Poly fill modes
+(define-constant ALTERNATE     1)
+(define-constant WINDING       2)
+(define-constant POLYFILL_LAST 2)
