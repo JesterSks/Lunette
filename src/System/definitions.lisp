@@ -40,6 +40,7 @@
 (defctype LPARAM  :long)
 (defctype LRESULT :long)
 
+(defctype BYTE  :unsigned-char)
 (defctype WORD  :unsigned-short)
 (defctype DWORD :unsigned-long)
 (defctype BOOL  :int)

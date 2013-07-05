@@ -44,6 +44,7 @@
            #:LPARAM
            #:LRESULT
 
+           #:BYTE
            #:WORD
            #:DWORD
            #:BOOL

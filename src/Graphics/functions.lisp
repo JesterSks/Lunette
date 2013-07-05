@@ -122,13 +122,13 @@
   (nXEndArc    :int)
   (nYEndArc    :int))
 
-((defcfun "AngleArc" BOOL
-   (hdc         HDC)
-   (X           :int)
-   (Y           :int)
-   (dwRadius    DWORD)
-   (eStartAngle :float)
-   (eSweepAngle :float)))
+(defcfun "AngleArc" BOOL
+  (hdc         HDC)
+  (X           :int)
+  (Y           :int)
+  (dwRadius    DWORD)
+  (eStartAngle :float)
+  (eSweepAngle :float))
 
 (defcfun "ArcTo" BOOL
   (hdc         HDC)
