@@ -202,6 +202,17 @@
   (nXRadial2   :int)
   (nYRadial2   :int))
 
+(defcfun "Polygon" BOOL
+  (hdc      HDC)
+  (lpPoints (:pointer POINT))
+  (nCount   :int))
+
+(defcfun "PolyPolygon" BOOL
+  (hdc          HDC)
+  (lpPoints     (:pointer POINT))
+  (lpPolyCounts (:pointer :int))
+  (nCount       :int))
+
 (defcfun "SetBkColor" COLORREF
   (hdc     HDC)
   (crColor COLORREF))

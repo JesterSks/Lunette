@@ -145,6 +145,8 @@
            #:RoundRect
            #:Pie
            #:Chord
+           #:Polygon
+           #:PolyPolygon
            #:SetBkColor
            #:SetBkMode
            #:SetPolyFillMode))
