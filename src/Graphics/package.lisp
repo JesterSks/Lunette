@@ -92,6 +92,11 @@
            #:WINDING
            #:POLYFILL_LAST
 
+           #:PT_CLOSEFIGURE
+           #:PT_LINETO
+           #:PT_BEZIERTO
+           #:PT_MOVETO
+
            #:RECT
            #:left
            #:top

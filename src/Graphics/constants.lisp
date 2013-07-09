@@ -88,3 +88,9 @@
 (define-constant ALTERNATE     1)
 (define-constant WINDING       2)
 (define-constant POLYFILL_LAST 2)
+
+;;; PolyDraw constants
+(define-constant PT_CLOSEFIGURE #x01)
+(define-constant PT_LINETO      #x02)
+(define-constant PT_BEZIERTO    #x04)
+(define-constant PT_MOVETO      #x06)

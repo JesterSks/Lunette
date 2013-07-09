@@ -108,7 +108,7 @@
 (defcfun "PolyPolyline" BOOL
   (hdc            HDC)
   (lppt           (:pointer POINT))
-  (lpdwPolyPoints DWORD)
+  (lpdwPolyPoints (:pointer DWORD))
   (cCount         DWORD))
 
 (defcfun "Arc" BOOL
