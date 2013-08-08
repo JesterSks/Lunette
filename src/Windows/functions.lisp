@@ -46,6 +46,10 @@
   (wparam WPARAM)
   (lparam LPARAM))
 
+(defcfun "GetClientRect" BOOL
+  (hWnd HWND)
+  (lprect LPRECT))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

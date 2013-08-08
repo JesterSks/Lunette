@@ -40,6 +40,9 @@
   (:import-from :Lunette.Graphics
                 #:WHITE_BRUSH
 
+                #:RECT
+                #:LPRECT
+
                 #:GetStockObject)
   (:export #:CS_VREDRAW
            #:CS_HREDRAW
@@ -119,6 +122,7 @@
            #:ShowWindow
            #:UpdateWindow
            #:DefWindowProc
+           #:GetClientRect
 
            #:register-class
            #:create-window-ex))

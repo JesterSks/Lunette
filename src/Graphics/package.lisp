@@ -149,4 +149,6 @@
            #:PolyPolygon
            #:SetBkColor
            #:SetBkMode
-           #:SetPolyFillMode))
+           #:SetPolyFillMode
+           #:SetViewportOrgEx
+           #:SetWindowOrgEx))

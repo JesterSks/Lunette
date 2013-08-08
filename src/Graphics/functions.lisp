@@ -231,3 +231,15 @@
 (defcfun "SetPolyFillMode" :int
   (hdc           HDC)
   (iPolyFillMode :int))
+
+(defcfun "SetViewportOrgEx" BOOL
+  (hdc     HDC)
+  (x       :INT)
+  (y       :INT)
+  (lpPoint LPPOINT))
+
+(defcfun "SetWindowOrgEx" BOOL
+  (hdc     HDC)
+  (x       :INT)
+  (y       :INT)
+  (lpPoint LPPOINT))
