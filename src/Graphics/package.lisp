@@ -97,6 +97,19 @@
            #:PT_BEZIERTO
            #:PT_MOVETO
 
+           #:MM_TEXT
+           #:MM_LOMETRIC
+           #:MM_HIMETRIC
+           #:MM_LOENGLISH
+           #:MM_HIENGLISH
+           #:MM_TWIPS
+           #:MM_ISOTROPIC
+           #:MM_ANISOTROPIC
+
+           #:MM_MIN
+           #:MM_MAX
+           #:MM_MAX_FIXEDSCALE
+
            #:RECT
            #:left
            #:top
@@ -151,4 +164,5 @@
            #:SetBkMode
            #:SetPolyFillMode
            #:SetViewportOrgEx
-           #:SetWindowOrgEx))
+           #:SetWindowOrgEx
+           #:SetMapMode))

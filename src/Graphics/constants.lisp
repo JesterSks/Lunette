@@ -94,3 +94,17 @@
 (define-constant PT_LINETO      #x02)
 (define-constant PT_BEZIERTO    #x04)
 (define-constant PT_MOVETO      #x06)
+
+;;; Mapping Modes
+(define-constant MM_TEXT        1)
+(define-constant MM_LOMETRIC    2)
+(define-constant MM_HIMETRIC    3)
+(define-constant MM_LOENGLISH   4)
+(define-constant MM_HIENGLISH   5)
+(define-constant MM_TWIPS       6)
+(define-constant MM_ISOTROPIC   7)
+(define-constant MM_ANISOTROPIC 8)
+
+(define-constant MM_MIN            MM_TEXT)
+(define-constant MM_MAX            MM_ANISOTROPIC)
+(define-constant MM_MAX_FIXEDSCALE MM_TWIPS)

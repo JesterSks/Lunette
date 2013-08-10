@@ -243,3 +243,7 @@
   (x       :INT)
   (y       :INT)
   (lpPoint LPPOINT))
+
+(defcfun "SetMapMode" :INT
+  (hdc       HDC)
+  (fnMapMode :INT))
