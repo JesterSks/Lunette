@@ -50,6 +50,8 @@
   (hWnd HWND)
   (lprect LPRECT))
 
+(defcfun "GetFocus" HWND)
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

@@ -34,6 +34,8 @@
            #:HPEN
            #:HWND
            #:HMENU
+           #:HFONT
+           #:HBITMAP
 
            #:WNDPROC
 
@@ -48,6 +50,7 @@
            #:WORD
            #:DWORD
            #:BOOL
+           #:WCHAR
 
            #:W32-ATOM
 
@@ -67,4 +70,6 @@
            #:PPOINT
            #:LPPOINT
 
-           #:GetModuleHandle))
+           #:GetModuleHandle
+           #:loword
+           #:hiword))

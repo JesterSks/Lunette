@@ -30,6 +30,8 @@
 (defctype HPEN    HANDLE)
 (defctype HWND    HANDLE)
 (defctype HMENU   HANDLE)
+(defctype HFONT   HANDLE)
+(defctype HBITMAP HANDLE)
 
 (defctype WNDPROC :pointer)
 
@@ -44,6 +46,7 @@
 (defctype WORD  :unsigned-short)
 (defctype DWORD :unsigned-long)
 (defctype BOOL  :int)
+(defctype WCHAR :unsigned-short)
 
 (defctype W32-ATOM WORD)
 

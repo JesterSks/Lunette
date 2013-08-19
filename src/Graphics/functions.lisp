@@ -34,17 +34,6 @@
                               (progn ,@body)
                             (EndPaint ,hWnd ,ps)))))
 
-(defcfun ("TextOutW" TextOut) BOOL
-  (hdc HDC)
-  (nXStart :int)
-  (nYStart :int)
-  (lpString LPCTSTR)
-  (cchString :int))
-
-(defun text-out (hdc x y str)
-  (with-foreign-string (cstr str)
-                       (TextOut hdc x y cstr (length str))))
-
 (defcfun "CreateSolidBrush" HBRUSH
   (crColor COLORREF))
 
@@ -247,3 +236,21 @@
 (defcfun "SetMapMode" :INT
   (hdc       HDC)
   (fnMapMode :INT))
+
+(defcfun "GetDC" HDC
+  (hWnd HWND))
+
+(defcfun "ReleaseDC" :int
+  (hWnd HWND)
+  (hDC HDC))
+
+(defmacro with-dc (hdc hWnd &body body)
+  `(let ((,hdc (GetDC ,hWnd)))
+     (unwind-protect
+         (progn ,@body)
+       (ReleaseDC ,hWnd ,hdc))))
+
+(defcfun "InvalidateRect" BOOL
+  (hWnd HWND)
+  (lpRect (:pointer RECT))
+  (bErase BOOL))

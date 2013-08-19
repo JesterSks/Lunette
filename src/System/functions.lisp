@@ -18,3 +18,9 @@
 
 (defcfun ("GetModuleHandleW" GetModuleHandle) HMODULE
   (lpModuleName lpctstr))
+
+(defun loword (value)
+  (mask-field (byte 16 0) value))
+
+(defun hiword (value)
+  (mask-field (byte 16 0) (ash value -16)))

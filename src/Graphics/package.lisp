@@ -131,8 +131,6 @@
            #:BeginPaint
            #:EndPaint
            #:with-ps
-           #:TextOut
-           #:text-out
            #:CreateSolidBrush
            #:CreateHatchBrush
            #:CreatePen
@@ -165,4 +163,8 @@
            #:SetPolyFillMode
            #:SetViewportOrgEx
            #:SetWindowOrgEx
-           #:SetMapMode))
+           #:SetMapMode
+           #:GetDC
+           #:ReleaseDC
+           #:with-dc
+           #:InvalidateRect))

@@ -123,6 +123,7 @@
            #:UpdateWindow
            #:DefWindowProc
            #:GetClientRect
+           #:GetFocus
 
            #:register-class
            #:create-window-ex))

@@ -29,3 +29,9 @@
   (lpmsg LPMSG))
 
 (defcfun "PostQuitMessage" :void (nExitCode :int))
+
+(defcfun ("SendMessageW" SendMessage) LRESULT
+  (hWnd HWND)
+  (Msg :UINT)
+  (wParam WPARAM)
+  (lParam LPARAM))

@@ -272,4 +272,5 @@
            #:GetMessage
            #:TranslateMessage
            #:DispatchMessage
-           #:PostQuitMessage))
+           #:PostQuitMessage
+           #:SendMessage))

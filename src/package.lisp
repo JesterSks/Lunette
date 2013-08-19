@@ -49,7 +49,8 @@
                 #:BeginPaint
                 #:EndPaint
 
-                #:with-ps
+                #:with-ps)
+  (:import-from :Lunette.Graphics.Text
                 #:text-out)
   (:export #:LRESULT
            #:HWND

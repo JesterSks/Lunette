@@ -35,6 +35,10 @@
              (:file "definitions" :depends-on ("package"))
              (:file "structures"  :depends-on ("package" "definitions"))
              (:file "functions"   :depends-on ("package" "definitions" "structures"))))
+   (:module "src/VirtualKeys"
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))))
    (:module "src/Memory"
             :depends-on ("src/System")
             :components
@@ -61,6 +65,13 @@
              (:file "functions"   :depends-on ("package" "structures"))))
    (:module "src/Graphics"
             :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "structures"  :depends-on ("package"))
+             (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src/Graphics/Text"
+            :depends-on ("src/System" "src/Graphics")
             :components
             ((:file "package")
              (:file "constants"   :depends-on ("package"))
