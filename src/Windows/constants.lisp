@@ -92,3 +92,12 @@
 (define-constant SW_SHOWDEFAULT      10)
 (define-constant SW_FORCEMINIMIZE    11)
 (define-constant SW_MAX              11)
+
+;;; Key State Masks for Mouse Messages
+(define-constant MK_LBUTTON  #x0001)
+(define-constant MK_RBUTTON  #x0002)
+(define-constant MK_SHIFT    #x0004)
+(define-constant MK_CONTROL  #x0008)
+(define-constant MK_MBUTTON  #x0010)
+(define-constant MK_XBUTTON1 #x0020)
+(define-constant MK_XBUTTON2 #x0040)

@@ -104,6 +104,14 @@
            #:SW_FORCEMINIMIZE
            #:SW_MAX
 
+           #:MK_LBUTTON
+           #:MK_RBUTTON
+           #:MK_SHIFT
+           #:MK_CONTROL
+           #:MK_MBUTTON
+           #:MK_XBUTTON1
+           #:MK_XBUTTON2
+
            #:WNDCLASS
            #:style
            #:lpfnWndProc
@@ -124,6 +132,8 @@
            #:DefWindowProc
            #:GetClientRect
            #:GetFocus
+           #:SetCursor
+           #:ShowCursor
 
            #:register-class
            #:create-window-ex))
