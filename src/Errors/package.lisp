@@ -35,5 +35,6 @@
 
            #:GetLastError
            #:FormatMessage
+           #:MessageBeep
            #:get-win-error-str
            #:get-last-error))

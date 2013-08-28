@@ -27,6 +27,10 @@
   (nSize        DWORD)
   (Arguments    va_list))
 
+
+(defcfun "MessageBeep" BOOL
+  (uType :UINT))
+
 (defun get-win-error-str (err)
   (with-foreign-object (lpMsgBuf 'LPVOID)
                        (FormatMessage (logior FORMAT_MESSAGE_ALLOCATE_BUFFER
