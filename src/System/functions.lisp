@@ -24,3 +24,7 @@
 
 (defun hiword (value)
   (mask-field (byte 16 0) (ash value -16)))
+
+(defun makelong (a b)
+  (logior (mask-field (byte 16 0) a)
+          (ash (mask-field (byte 16 0) b) 16)))

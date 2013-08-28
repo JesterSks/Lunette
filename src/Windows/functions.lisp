@@ -58,6 +58,21 @@
 (defcfun "ShowCursor" :int
   (bShow BOOL))
 
+(defcfun "GetCursorPos" BOOL
+  (lpPoint LPPOINT))
+
+(defcfun "SetCursorPos" BOOL
+  (x :int)
+  (y :int))
+
+(defcfun "ScreenToClient" BOOL
+  (hWnd HWND)
+  (lpPoint LPPOINT))
+
+(defcfun "ClientToScreen" BOOL
+  (hWnd HWND)
+  (lpPoint LPPOINT))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

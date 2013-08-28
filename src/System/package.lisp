@@ -72,4 +72,5 @@
 
            #:GetModuleHandle
            #:loword
-           #:hiword))
+           #:hiword
+           #:makelong))

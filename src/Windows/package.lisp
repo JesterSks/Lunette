@@ -173,6 +173,10 @@
            #:GetFocus
            #:SetCursor
            #:ShowCursor
+           #:GetCursorPos
+           #:SetCursorPos
+           #:ScreenToClient
+           #:ClientToScreen
 
            #:register-class
            #:create-window-ex))
