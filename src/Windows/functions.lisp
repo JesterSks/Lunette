@@ -73,6 +73,23 @@
   (hWnd HWND)
   (lpPoint LPPOINT))
 
+(defcfun "MoveWindow" BOOL
+  (hWnd     HWND)
+  (x        :int)
+  (y        :int)
+  (nWidth   :int)
+  (nHeight  :int)
+  (bRepaint BOOL))
+
+(defcfun ("SetWindowLongW" SetWindowLong) :LONG
+  (hWnd      HWND)
+  (nIndex    :int)
+  (dwNewLong :LONG))
+
+(defcfun ("GetWindowLongW" GetWindowLong) :LONG
+  (hWnd   HWND)
+  (nIndex :int))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

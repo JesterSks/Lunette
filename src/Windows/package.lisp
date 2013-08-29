@@ -177,6 +177,9 @@
            #:SetCursorPos
            #:ScreenToClient
            #:ClientToScreen
+           #:MoveWindow
+           #:SetWindowLong
+           #:GetWindowLong
 
            #:register-class
            #:create-window-ex))
