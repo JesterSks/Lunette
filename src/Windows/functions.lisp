@@ -52,6 +52,9 @@
 
 (defcfun "GetFocus" HWND)
 
+(defcfun "SetFocus" HWND
+  (hWnd HWND))
+
 (defcfun "SetCursor" HWND
   (hCursor HCURSOR))
 
@@ -89,6 +92,9 @@
 (defcfun ("GetWindowLongW" GetWindowLong) :LONG
   (hWnd   HWND)
   (nIndex :int))
+
+(defcfun "GetParent" HWND
+  (hWnd HWND))
 
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))

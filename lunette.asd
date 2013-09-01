@@ -63,6 +63,11 @@
              (:file "constants"   :depends-on ("package"))
              (:file "structures"  :depends-on ("package"))
              (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src/Dialogs"
+            :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "functions" :depends-on ("package"))))
    (:module "src/Graphics"
             :depends-on ("src/System")
             :components

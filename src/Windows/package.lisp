@@ -151,6 +151,14 @@
            #:MB_MODEMASK
            #:MB_MISCMASK
 
+           #:GWL_WNDPROC
+           #:GWL_HINSTANCE
+           #:GWL_HWNDPARENT
+           #:GWL_STYLE
+           #:GWL_EXSTYLE
+           #:GWL_USERDATA
+           #:GWL_ID
+
            #:WNDCLASS
            #:style
            #:lpfnWndProc
@@ -171,6 +179,7 @@
            #:DefWindowProc
            #:GetClientRect
            #:GetFocus
+           #:SetFocus
            #:SetCursor
            #:ShowCursor
            #:GetCursorPos
@@ -180,6 +189,7 @@
            #:MoveWindow
            #:SetWindowLong
            #:GetWindowLong
+           #:GetParent
 
            #:register-class
            #:create-window-ex))

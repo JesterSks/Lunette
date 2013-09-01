@@ -140,3 +140,12 @@
 (define-constant MB_DEFMASK                   #x00000F00)
 (define-constant MB_MODEMASK                  #x00003000)
 (define-constant MB_MISCMASK                  #x0000C000)
+
+;;; Window field offsets for GetWindowLong()
+(define-constant GWL_WNDPROC    -4)
+(define-constant GWL_HINSTANCE  -6)
+(define-constant GWL_HWNDPARENT -8)
+(define-constant GWL_STYLE      -16)
+(define-constant GWL_EXSTYLE    -20)
+(define-constant GWL_USERDATA   -21)
+(define-constant GWL_ID         -12)
