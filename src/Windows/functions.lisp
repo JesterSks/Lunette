@@ -96,6 +96,11 @@
 (defcfun "GetParent" HWND
   (hWnd HWND))
 
+(defcfun "SetCapture" HWND
+  (hWnd HWND))
+
+(defcfun "ReleaseCapture" BOOL)
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

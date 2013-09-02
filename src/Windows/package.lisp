@@ -190,6 +190,8 @@
            #:SetWindowLong
            #:GetWindowLong
            #:GetParent
+           #:SetCapture
+           #:ReleaseCapture
 
            #:register-class
            #:create-window-ex))
