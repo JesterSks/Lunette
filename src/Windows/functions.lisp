@@ -101,6 +101,10 @@
 
 (defcfun "ReleaseCapture" BOOL)
 
+(defcfun "ValidateRect" BOOL
+  (hWnd HWND)
+  (lpRect (:pointer RECT)))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

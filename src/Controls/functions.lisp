@@ -14,10 +14,11 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Dialogs)
+(in-package :Lunette.Controls)
 
-(defcfun "GetDlgItem" HWND
-  (hDlg HWND)
-  (nIDDlgItem :INT))
-
-(defcfun "GetDialogBaseUnits" :LONG)
+(defcfun "ScrollWindow" :int
+  (hWnd HWND)
+  (dx :int)
+  (dy :int)
+  (prcScroll (:pointer RECT))
+  (prcClip (:pointer RECT)))

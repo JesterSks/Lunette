@@ -192,6 +192,7 @@
            #:GetParent
            #:SetCapture
            #:ReleaseCapture
+           #:ValidateRect
 
            #:register-class
            #:create-window-ex))

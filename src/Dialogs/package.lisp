@@ -28,4 +28,5 @@
                 #:foreign-slot-value)
   (:import-from :alexandria
                 #:define-constant)
-  (:export #:GetDlgItem))
+  (:export #:GetDlgItem
+           #:GetDialogBaseUnits))
