@@ -193,6 +193,7 @@
            #:SetCapture
            #:ReleaseCapture
            #:ValidateRect
+           #:GetWindowRect
 
            #:register-class
            #:create-window-ex))

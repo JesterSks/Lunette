@@ -254,3 +254,24 @@
   (hWnd HWND)
   (lpRect (:pointer RECT))
   (bErase BOOL))
+
+(defcfun "GetSysColor" DWORD
+  (nIndex :INT))
+
+(defcfun "DrawFocusRect" BOOL
+  (hDC HDC)
+  (lprc (:pointer RECT)))
+
+(defcfun "FrameRect" :INT
+  (hDC HDC)
+  (lprc (:pointer RECT))
+  (hbr HBRUSH))
+
+(defcfun "FillRect" :INT
+  (hDC HDC)
+  (lprc (:pointer RECT))
+  (hbr HBRUSH))
+
+(defcfun "InvertRect" BOOL
+  (hDC HDC)
+  (lprc (:pointer RECT)))

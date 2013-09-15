@@ -137,4 +137,5 @@
            #:SetCaretPos
            #:ShowCaret
            #:HideCaret
-           #:DestroyCaret))
+           #:DestroyCaret
+           #:SetTextColor))

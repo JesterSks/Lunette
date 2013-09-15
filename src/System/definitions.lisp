@@ -59,3 +59,5 @@
 (defctype LPCOLORREF :pointer)
 
 (defctype va_list :pointer)
+
+(defctype ULONG_PTR :pointer)

@@ -105,6 +105,10 @@
   (hWnd HWND)
   (lpRect (:pointer RECT)))
 
+(defcfun "GetWindowRect" BOOL
+  (hWnd HWND)
+  (lpRect LPRECT))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

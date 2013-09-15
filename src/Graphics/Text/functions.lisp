@@ -94,3 +94,7 @@
   (hWnd HWND))
 
 (defcfun "DestroyCaret" BOOL)
+
+(defcfun "SetTextColor" COLORREF
+  (hdc HDC)
+  (crColor COLORREF))

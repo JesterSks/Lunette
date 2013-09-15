@@ -64,6 +64,8 @@
 
            #:va_list
 
+           #:ULONG_PTR
+
            #:POINT
            #:x
            #:y

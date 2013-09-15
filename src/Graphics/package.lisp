@@ -110,6 +110,67 @@
            #:MM_MAX
            #:MM_MAX_FIXEDSCALE
 
+           #:CTLCOLOR_MSGBOX
+           #:CTLCOLOR_EDIT
+           #:CTLCOLOR_LISTBOX
+           #:CTLCOLOR_BTN
+           #:CTLCOLOR_DLG
+           #:CTLCOLOR_SCROLLBAR
+           #:CTLCOLOR_STATIC
+           #:CTLCOLOR_MAX
+
+           #:COLOR_SCROLLBAR
+           #:COLOR_BACKGROUND
+           #:COLOR_ACTIVECAPTION
+           #:COLOR_INACTIVECAPTION
+           #:COLOR_MENU
+           #:COLOR_WINDOW
+           #:COLOR_WINDOWFRAME
+           #:COLOR_MENUTEXT
+           #:COLOR_WINDOWTEXT
+           #:COLOR_CAPTIONTEXT
+           #:COLOR_ACTIVEBORDER
+           #:COLOR_INACTIVEBORDER
+           #:COLOR_APPWORKSPACE
+           #:COLOR_HIGHLIGHT
+           #:COLOR_HIGHLIGHTTEXT
+           #:COLOR_BTNFACE
+           #:COLOR_BTNSHADOW
+           #:COLOR_GRAYTEXT
+           #:COLOR_BTNTEXT
+           #:COLOR_INACTIVECAPTIONTEXT
+           #:COLOR_BTNHIGHLIGHT
+
+           #:COLOR_3DDKSHADOW
+           #:COLOR_3DLIGHT
+           #:COLOR_INFOTEXT
+           #:COLOR_INFOBK
+
+           #:COLOR_HOTLIGHT
+           #:COLOR_GRADIENTACTIVECAPTION
+           #:COLOR_GRADIENTINACTIVECAPTION
+           #:COLOR_MENUHILIGHT
+           #:COLOR_MENUBAR
+
+           #:COLOR_DESKTOP
+           #:COLOR_3DFACE
+           #:COLOR_3DSHADOW
+           #:COLOR_3DHIGHLIGHT
+           #:COLOR_3DHILIGHT
+           #:COLOR_BTNHILIGHT
+
+           #:ODS_SELECTED
+           #:ODS_GRAYED
+           #:ODS_DISABLED
+           #:ODS_CHECKED
+           #:ODS_FOCUS
+           #:ODS_DEFAULT
+           #:ODS_COMBOBOXEDIT
+           #:ODS_HOTLIGHT
+           #:ODS_INACTIVE
+           #:ODS_NOACCEL
+           #:ODS_NOFOCUSRECT
+
            #:RECT
            #:left
            #:top
@@ -167,4 +228,9 @@
            #:GetDC
            #:ReleaseDC
            #:with-dc
-           #:InvalidateRect))
+           #:InvalidateRect
+           #:GetSysColor
+           #:DrawFocusRect
+           #:FrameRect
+           #:FillRect
+           #:InvertRect))
