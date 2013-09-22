@@ -52,4 +52,71 @@
            #:BS_FLAT
            #:BS_RIGHTBUTTON
 
-           #:ScrollWindowEx))
+           #:SB_LINEUP
+           #:SB_LINELEFT
+           #:SB_LINEDOWN
+           #:SB_LINERIGHT
+           #:SB_PAGEUP
+           #:SB_PAGELEFT
+           #:SB_PAGEDOWN
+           #:SB_PAGERIGHT
+           #:SB_THUMBPOSITION
+           #:SB_THUMBTRACK
+           #:SB_TOP
+           #:SB_LEFT
+           #:SB_BOTTOM
+           #:SB_RIGHT
+           #:SB_ENDSCROLL
+
+           #:SBS_HORZ
+           #:SBS_VERT
+           #:SBS_TOPALIGN
+           #:SBS_LEFTALIGN
+           #:SBS_BOTTOMALIGN
+           #:SBS_RIGHTALIGN
+           #:SBS_SIZEBOXTOPLEFTALIGN
+           #:SBS_SIZEBOXBOTTOMRIGHTALIGN
+           #:SBS_SIZEBOX
+           #:SBS_SIZEGRIP
+
+           #:SS_LEFT
+           #:SS_CENTER
+           #:SS_RIGHT
+           #:SS_ICON
+           #:SS_BLACKRECT
+           #:SS_GRAYRECT
+           #:SS_WHITERECT
+           #:SS_BLACKFRAME
+           #:SS_GRAYFRAME
+           #:SS_WHITEFRAME
+           #:SS_USERITEM
+           #:SS_SIMPLE
+           #:SS_LEFTNOWORDWRAP
+           #:SS_OWNERDRAW
+           #:SS_BITMAP
+           #:SS_ENHMETAFILE
+           #:SS_ETCHEDHORZ
+           #:SS_ETCHEDVERT
+           #:SS_ETCHEDFRAME
+           #:SS_TYPEMASK
+           #:SS_REALSIZECONTROL
+           #:SS_NOPREFIX
+           #:SS_NOTIFY
+           #:SS_CENTERIMAGE
+           #:SS_RIGHTJUST
+           #:SS_REALSIZEIMAGE
+           #:SS_SUNKEN
+           #:SS_EDITCONTROL
+           #:SS_ENDELLIPSIS
+           #:SS_PATHELLIPSIS
+           #:SS_WORDELLIPSIS
+           #:SS_ELLIPSISMASK
+
+           #:SB_HORZ
+           #:SB_VERT
+           #:SB_CTL
+           #:SB_BOTH
+
+           #:ScrollWindowEx
+           #:SetScrollRange
+           #:SetScrollPos))

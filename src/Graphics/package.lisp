@@ -233,4 +233,5 @@
            #:DrawFocusRect
            #:FrameRect
            #:FillRect
-           #:InvertRect))
+           #:InvertRect
+           #:SetRect))

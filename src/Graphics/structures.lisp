@@ -36,3 +36,18 @@
 
 (defctype PAINTSTRUCT (:struct tagPAINTSTRUCT))
 (defctype LPPAINTSTRUCT (:pointer PAINTSTRUCT))
+
+(defcstruct tagDRAWITEMSTRUCT
+  (CtlType    :UINT)
+  (CtlID      :UINT)
+  (itemID     :UINT)
+  (itemAction :UINT)
+  (itemState  :UINT)
+  (hwndItem   HWND)
+  (hDC        HDC)
+  (rcItem     RECT)
+  (itemData   ULONG_PTR))
+
+(defctype DRAWITEMSTRUCT (:struct tagDRAWITEMSTRUCT))
+(defctype PDRAWITEMSTRUCT (:pointer DRAWITEMSTRUCT))
+(defctype LPDRAWITEMSTRUCT (:pointer DRAWITEMSTRUCT))

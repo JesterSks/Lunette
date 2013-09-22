@@ -109,6 +109,25 @@
   (hWnd HWND)
   (lpRect LPRECT))
 
+(defcfun ("SetWindowTextW" SetWindowText) BOOL
+  (hWnd HWND)
+  (lpString LPCTSTR))
+
+(defcfun ("SetClassLongW" SetClassLong) DWORD
+  (hWnd HWND)
+  (nIndex :int)
+  (dwNewLong :LONG))
+
+(defcfun "GetKeyState" :SHORT
+  (nVirtKey :INT))
+
+(defcfun ("CallWindowProcW" CallWindowProc) LRESULT
+  (lpPrevWndFunc WNDPROC)
+  (hWnd HWND)
+  (Msg :UINT)
+  (wParam WPARAM)
+  (lParam LPARAM))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

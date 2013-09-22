@@ -22,3 +22,16 @@
   (dy :int)
   (prcScroll (:pointer RECT))
   (prcClip (:pointer RECT)))
+
+(defcfun "SetScrollRange" BOOL
+  (hWnd HWND)
+  (nBar :INT)
+  (nMinPos :INT)
+  (nMaxPos :INT)
+  (bRedraw BOOL))
+
+(defcfun "SetScrollPos" :INT
+  (hWnd HWND)
+  (nBar :INT)
+  (nPos :INT)
+  (bRedraw BOOL))

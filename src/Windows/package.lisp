@@ -159,6 +159,18 @@
            #:GWL_USERDATA
            #:GWL_ID
 
+           #:GCL_MENUNAME
+           #:GCL_HBRBACKGROUND
+           #:GCL_HCURSOR
+           #:GCL_HICON
+           #:GCL_HMODULE
+           #:GCL_CBWNDEXTRA
+           #:GCL_CBCLSEXTRA
+           #:GCL_WNDPROC
+           #:GCL_STYLE
+           #:GCW_ATOM
+           #:GCL_HICONSM
+
            #:WNDCLASS
            #:style
            #:lpfnWndProc
@@ -194,6 +206,10 @@
            #:ReleaseCapture
            #:ValidateRect
            #:GetWindowRect
+           #:SetWindowText
+           #:SetClassLong
+           #:GetKeyState
+           #:CallWindowProc
 
            #:register-class
            #:create-window-ex))

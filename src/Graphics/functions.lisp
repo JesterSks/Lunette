@@ -275,3 +275,10 @@
 (defcfun "InvertRect" BOOL
   (hDC HDC)
   (lprc (:pointer RECT)))
+
+(defcfun "SetRect" BOOL
+  (lprc    LPRECT)
+  (xLeft   :INT)
+  (yTop    :INT)
+  (xRight  :INT)
+  (yBottom :INT))
