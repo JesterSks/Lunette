@@ -117,6 +117,32 @@
            #:SB_CTL
            #:SB_BOTH
 
+           #:ES_LEFT
+           #:ES_CENTER
+           #:ES_RIGHT
+           #:ES_MULTILINE
+           #:ES_UPPERCASE
+           #:ES_LOWERCASE
+           #:ES_PASSWORD
+           #:ES_AUTOVSCROLL
+           #:ES_AUTOHSCROLL
+           #:ES_NOHIDESEL
+           #:ES_OEMCONVERT
+           #:ES_READONLY
+           #:ES_WANTRETURN
+           #:ES_NUMBER
+
+           #:EN_SETFOCUS
+           #:EN_KILLFOCUS
+           #:EN_CHANGE
+           #:EN_UPDATE
+           #:EN_ERRSPACE
+           #:EN_MAXTEXT
+           #:EN_HSCROLL
+           #:EN_VSCROLL
+           #:EN_ALIGN_LTR_EC
+           #:EN_ALIGN_RTL_EC
+
            #:ScrollWindowEx
            #:SetScrollRange
            #:SetScrollPos))
