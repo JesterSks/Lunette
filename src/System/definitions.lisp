@@ -50,6 +50,9 @@
 
 (defctype W32-ATOM WORD)
 
+(defctype TCHAR :ushort)
+(defctype LPTCH (:pointer TCHAR))
+
 (defctype LPTSTR  :string)
 (defctype LPCSTR  :string)
 (defctype LPCTSTR LPCSTR)

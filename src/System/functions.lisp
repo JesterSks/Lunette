@@ -19,6 +19,16 @@
 (defcfun ("GetModuleHandleW" GetModuleHandle) HMODULE
   (lpModuleName lpctstr))
 
+(defcfun ("GetEnvironmentStringsW" GetEnvironmentStrings) LPTCH)
+
+(defcfun ("FreeEnvironmentStringsW" FreeEnvironmentStrings) BOOL
+  (lpszEnvironmentBlock LPTCH))
+
+(defcfun ("GetEnvironmentVariableW" GetEnvironmentVariable) DWORD
+  (lpName LPCTSTR)
+  (lpBuffer LPTSTR)
+  (nSize DWORD))
+
 (defun loword (value)
   (mask-field (byte 16 0) value))
 

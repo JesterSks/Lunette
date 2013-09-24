@@ -54,6 +54,9 @@
 
            #:W32-ATOM
 
+           #:TCHAR
+           #:LPTCH
+
            #:LPTSTR
            #:LPCSTR
            #:LPCTSTR
@@ -73,6 +76,9 @@
            #:LPPOINT
 
            #:GetModuleHandle
+           #:GetEnvironmentStrings
+           #:FreeEnvironmentStrings
+           #:GetEnvironmentVariable
            #:loword
            #:hiword
            #:makelong))
