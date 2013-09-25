@@ -16,6 +16,9 @@
 
 (in-package :Lunette.System)
 
+(defcfun "GetSystemMetrics" :int
+  (nIndex :int))
+
 (defcfun ("GetModuleHandleW" GetModuleHandle) HMODULE
   (lpModuleName lpctstr))
 

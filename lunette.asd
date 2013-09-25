@@ -33,6 +33,7 @@
             :components
             ((:file "package")
              (:file "definitions" :depends-on ("package"))
+             (:file "constants"   :depends-on ("package"))
              (:file "structures"  :depends-on ("package" "definitions"))
              (:file "functions"   :depends-on ("package" "definitions" "structures"))))
    (:module "src/VirtualKeys"
@@ -88,12 +89,6 @@
              (:file "constants"   :depends-on ("package"))
              (:file "structures"  :depends-on ("package"))
              (:file "functions"   :depends-on ("package" "structures"))))
-   (:module "src/Controls"
-            :depends-on ("src/System" "src/Graphics")
-            :components
-            ((:file "package")
-             (:file "constants" :depends-on ("package"))
-             (:file "functions" :depends-on ("package"))))
    (:module "src/Windows"
             :depends-on ("src/System" "src/Resources" "src/Graphics")
             :components
@@ -101,6 +96,12 @@
              (:file "constants"   :depends-on ("package"))
              (:file "structures"  :depends-on ("package"))
              (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src/Controls"
+            :depends-on ("src/System" "src/Graphics" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "functions" :depends-on ("package"))))
    (:module "src"
             :depends-on ("src/Messages" "src/Windows" "src/Graphics")
             :components
