@@ -19,3 +19,25 @@
 (defcfun ("GetCurrentDirectoryW" GetCurrentDirectory) DWORD
   (nBufferLength DWORD)
   (lpBuffer LPTSTR))
+
+(defcfun ("CreateFileW" CreateFile) HANDLE
+  (lpFileName LPCTSTR)
+  (dwDesiredAccess DWORD)
+  (dwShareMode DWORD)
+  (lpSecurityAttributes LPSECURITY_ATTRIBUTES)
+  (dwCreationDisposition DWORD)
+  (dwFlagsAndAttributes DWORD)
+  (hTemplateFile HANDLE))
+
+;;; I'm cheating with the lpOverlapped parameter it should be
+;;; an OVERLAPPED struct but cffi doesn't have a good way of doing
+;;; anonymous unions in structs.
+(defcfun "ReadFile" BOOL
+  (hFile HANDLE)
+  (lpBuffer LPVOID)
+  (nNumberOfBytesToRead DWORD)
+  (lpNumberOfBytesRead LPDWORD)
+  (lpOverlapped :pointer))
+
+(defcfun ("SetCurrentDirectoryW" SetCurrentDirectory) BOOL
+  (lpPathName LPCTSTR))

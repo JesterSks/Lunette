@@ -215,6 +215,18 @@
            #:LBN_SETFOCUS
            #:LBN_KILLFOCUS
 
+           #:DDL_READWRITE
+           #:DDL_READONLY
+           #:DDL_HIDDEN
+           #:DDL_SYSTEM
+           #:DDL_DIRECTORY
+           #:DDL_ARCHIVE
+
+           #:DDL_POSTMSGS
+           #:DDL_DRIVES
+           #:DDL_EXCLUSIVE
+
+
            #:ScrollWindowEx
            #:SetScrollRange
            #:SetScrollPos))

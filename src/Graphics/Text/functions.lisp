@@ -98,3 +98,10 @@
 (defcfun "SetTextColor" COLORREF
   (hdc HDC)
   (crColor COLORREF))
+
+(defcfun ("DrawTextW" DrawText) :int
+  (hDC HDC)
+  (lpchText LPCTSTR)
+  (nCount :int)
+  (lpRect LPRECT)
+  (uFormat :UINT))

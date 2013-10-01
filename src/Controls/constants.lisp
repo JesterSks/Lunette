@@ -215,3 +215,15 @@
 (define-constant LBN_SELCANCEL  3)
 (define-constant LBN_SETFOCUS   4)
 (define-constant LBN_KILLFOCUS  5)
+
+;;; DlgDirList, DlgDirListComboBox flags values
+(define-constant DDL_READWRITE #x0000)
+(define-constant DDL_READONLY  #x0001)
+(define-constant DDL_HIDDEN    #x0002)
+(define-constant DDL_SYSTEM    #x0004)
+(define-constant DDL_DIRECTORY #x0010)
+(define-constant DDL_ARCHIVE   #x0020)
+
+(define-constant DDL_POSTMSGS  #x2000)
+(define-constant DDL_DRIVES    #x4000)
+(define-constant DDL_EXCLUSIVE #x8000)

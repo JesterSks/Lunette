@@ -99,3 +99,30 @@
                                           ; Pica, Elite, Courier, etc.
 (define-constant FF_SCRIPT     (ash 4 4)) ; Cursive, etc.
 (define-constant FF_DECORATIVE (ash 5 4)) ; Old English, etc.
+
+;;; DrawText() Format Flags
+(define-constant DT_TOP             #x00000000)
+(define-constant DT_LEFT            #x00000000)
+(define-constant DT_CENTER          #x00000001)
+(define-constant DT_RIGHT           #x00000002)
+(define-constant DT_VCENTER         #x00000004)
+(define-constant DT_BOTTOM          #x00000008)
+(define-constant DT_WORDBREAK       #x00000010)
+(define-constant DT_SINGLELINE      #x00000020)
+(define-constant DT_EXPANDTABS      #x00000040)
+(define-constant DT_TABSTOP         #x00000080)
+(define-constant DT_NOCLIP          #x00000100)
+(define-constant DT_EXTERNALLEADING #x00000200)
+(define-constant DT_CALCRECT        #x00000400)
+(define-constant DT_NOPREFIX        #x00000800)
+(define-constant DT_INTERNAL        #x00001000)
+
+(define-constant DT_EDITCONTROL          #x00002000)
+(define-constant DT_PATH_ELLIPSIS        #x00004000)
+(define-constant DT_END_ELLIPSIS         #x00008000)
+(define-constant DT_MODIFYSTRING         #x00010000)
+(define-constant DT_RTLREADING           #x00020000)
+(define-constant DT_WORD_ELLIPSIS        #x00040000)
+(define-constant DT_NOFULLWIDTHCHARBREAK #x00080000)
+(define-constant DT_HIDEPREFIX           #x00100000)
+(define-constant DT_PREFIXONLY           #x00200000)

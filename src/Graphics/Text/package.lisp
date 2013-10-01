@@ -103,6 +103,32 @@
            #:FF_SCRIPT
            #:FF_DECORATIVE
 
+           #:DT_TOP
+           #:DT_LEFT
+           #:DT_CENTER
+           #:DT_RIGHT
+           #:DT_VCENTER
+           #:DT_BOTTOM
+           #:DT_WORDBREAK
+           #:DT_SINGLELINE
+           #:DT_EXPANDTABS
+           #:DT_TABSTOP
+           #:DT_NOCLIP
+           #:DT_EXTERNALLEADING
+           #:DT_CALCRECT
+           #:DT_NOPREFIX
+           #:DT_INTERNAL
+
+           #:DT_EDITCONTROL
+           #:DT_PATH_ELLIPSIS
+           #:DT_END_ELLIPSIS
+           #:DT_MODIFYSTRING
+           #:DT_RTLREADING
+           #:DT_WORD_ELLIPSIS
+           #:DT_NOFULLWIDTHCHARBREAK
+           #:DT_HIDEPREFIX
+           #:DT_PREFIXONLY
+
            #:tmHeight
            #:tmAscent
            #:tmDescent
@@ -138,4 +164,5 @@
            #:ShowCaret
            #:HideCaret
            #:DestroyCaret
-           #:SetTextColor))
+           #:SetTextColor
+           #:DrawText))

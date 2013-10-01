@@ -1,4 +1,4 @@
- #|
+#|
    Copyright 2013 Robert Burghart
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,19 +16,11 @@
 
 (in-package :Lunette.Files)
 
-(define-constant MAX_PATH 260)
+(defcstruct _SECURITY_ATTRIBUTES
+  (nLength DWORD)
+  (lpSecurityDescriptor LPVOID)
+  (bInheritHandle BOOL))
 
-(define-constant GENERIC_READ    #x80000000)
-(define-constant GENERIC_WRITE   #x40000000)
-(define-constant GENERIC_EXECUTE #x20000000)
-(define-constant GENERIC_ALL     #x10000000)
-
-(define-constant FILE_SHARE_READ   #x00000001)
-(define-constant FILE_SHARE_WRITE  #x00000002)
-(define-constant FILE_SHARE_DELETE #x00000004)
-
-(define-constant CREATE_NEW          1)
-(define-constant CREATE_ALWAYS       2)
-(define-constant OPEN_EXISTING       3)
-(define-constant OPEN_ALWAYS         4)
-(define-constant TRUNCATE_EXISTING   5)
+(defctype SECURITY_ATTRIBUTES (:struct _SECURITY_ATTRIBUTES))
+(defctype PSECURITY_ATTRIBUTES (:pointer SECURITY_ATTRIBUTES))
+(defctype LPSECURITY_ATTRIBUTES (:pointer SECURITY_ATTRIBUTES))

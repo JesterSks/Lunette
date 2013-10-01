@@ -18,9 +18,36 @@
   (:use #:common-lisp
         #:Lunette.System)
   (:import-from :cffi
-                #:defcfun)
+                #:defcfun
+                #:defcstruct
+                #:defctype)
   (:import-from :alexandria
                 #:define-constant)
   (:export #:MAX_PATH
 
-           #:GetCurrentDirectory))
+           #:GENERIC_READ
+           #:GENERIC_WRITE
+           #:GENERIC_EXECUTE
+           #:GENERIC_ALL
+
+           #:FILE_SHARE_READ
+           #:FILE_SHARE_WRITE
+           #:FILE_SHARE_DELETE
+
+           #:CREATE_NEW
+           #:CREATE_ALWAYS
+           #:OPEN_EXISTING
+           #:OPEN_ALWAYS
+           #:TRUNCATE_EXISTING
+
+           #:SECURITY_ATTRIBUTES
+           #:nLength
+           #:lpSecurityDescriptor
+           #:bInheritHangle
+           #:PSECURITY_ATTRIBUTES
+           #:LPSECURITY_ATTRIBUTES
+
+           #:GetCurrentDirectory
+           #:SetCurrentDirectory
+           #:CreateFile
+           #:ReadFile))
