@@ -25,6 +25,8 @@
                 #:with-foreign-string)
   (:import-from :alexandria
                 #:define-constant)
+  (:import-from :Lunette.Graphics
+                #:LPRECT)
   (:export #:FW_DONTCARE
            #:FW_THIN
            #:FW_EXTRALIGHT

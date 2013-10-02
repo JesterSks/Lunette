@@ -86,8 +86,9 @@
             :depends-on ("src/System")
             :components
             ((:file "package")
-             (:file "constants" :depends-on ("package"))
-             (:file "functions" :depends-on ("package"))))
+             (:file "constants"  :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))
+             (:file "functions"  :depends-on ("package" "structures"))))
    (:module "src/Graphics/Text"
             :depends-on ("src/System" "src/Graphics")
             :components

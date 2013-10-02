@@ -48,6 +48,8 @@
 (defctype BOOL  :int)
 (defctype WCHAR :unsigned-short)
 
+(defctype LPDWORD (:pointer DWORD))
+
 (defctype W32-ATOM WORD)
 
 (defctype TCHAR :ushort)

@@ -226,7 +226,6 @@
            #:DDL_DRIVES
            #:DDL_EXCLUSIVE
 
-
            #:ScrollWindowEx
            #:SetScrollRange
            #:SetScrollPos))

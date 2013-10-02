@@ -54,6 +54,8 @@
            #:BOOL
            #:WCHAR
 
+           #:LPDWORD
+
            #:W32-ATOM
 
            #:TCHAR
