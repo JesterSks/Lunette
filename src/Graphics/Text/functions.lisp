@@ -105,3 +105,7 @@
   (nCount :int)
   (lpRect LPRECT)
   (uFormat :UINT))
+
+(defun draw-text (hdc str rect uformat)
+  (with-foreign-string (cstr str)
+                       (DrawText hdc cstr (length str) rect uformat)))

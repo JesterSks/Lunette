@@ -226,6 +226,10 @@
            #:DDL_DRIVES
            #:DDL_EXCLUSIVE
 
+           #:LB_OKAY
+           #:LB_ERR
+           #:LB_ERRSPACE
+
            #:ScrollWindowEx
            #:SetScrollRange
            #:SetScrollPos))

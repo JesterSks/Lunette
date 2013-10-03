@@ -227,3 +227,8 @@
 (define-constant DDL_POSTMSGS  #x2000)
 (define-constant DDL_DRIVES    #x4000)
 (define-constant DDL_EXCLUSIVE #x8000)
+
+;;; Listbox Return Values
+(define-constant LB_OKAY     0)
+(define-constant LB_ERR      -1)
+(define-constant LB_ERRSPACE -2)

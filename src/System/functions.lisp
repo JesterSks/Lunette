@@ -32,6 +32,9 @@
   (lpBuffer LPTSTR)
   (nSize DWORD))
 
+(defcfun "CloseHandle" BOOL
+  (hObject HANDLE))
+
 (defun loword (value)
   (mask-field (byte 16 0) value))
 

@@ -20,7 +20,9 @@
   (:import-from :cffi
                 #:defcfun
                 #:defcstruct
-                #:defctype)
+                #:defctype
+                #:make-pointer
+                #:pointer-eq)
   (:import-from :alexandria
                 #:define-constant)
   (:export #:MAX_PATH

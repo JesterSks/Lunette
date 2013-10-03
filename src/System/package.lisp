@@ -184,6 +184,7 @@
            #:GetEnvironmentStrings
            #:FreeEnvironmentStrings
            #:GetEnvironmentVariable
+           #:CloseHandle
            #:loword
            #:hiword
            #:makelong))

@@ -32,3 +32,10 @@
 (define-constant OPEN_EXISTING       3)
 (define-constant OPEN_ALWAYS         4)
 (define-constant TRUNCATE_EXISTING   5)
+
+;;; INVALID_HANDLE_VALUE is supposed to be -1 but CFFI can't handle
+;;; the fact that negative numbers are just an interpretation of a positive number
+(define-constant INVALID_HANDLE_VALUE     (make-pointer #xFFFFFFFF) :test #'pointer-eq)
+(define-constant INVALID_FILE_SIZE        #xFFFFFFFF)
+(define-constant INVALID_SET_FILE_POINTER -1)
+(define-constant INVALID_FILE_ATTRIBUTES  -1)

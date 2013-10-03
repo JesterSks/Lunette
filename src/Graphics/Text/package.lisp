@@ -167,4 +167,4 @@
            #:HideCaret
            #:DestroyCaret
            #:SetTextColor
-           #:DrawText))
+           #:draw-text))
