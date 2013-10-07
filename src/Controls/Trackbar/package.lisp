@@ -15,10 +15,14 @@
 |#
 
 (defpackage :Lunette.Controls.Trackbar
-  (:use :common-lisp
-        :alexandria
-        :Lunette.Windows
-        :Lunette.Controls)
+  (:use :common-lisp)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Messages
+                #:WM_USER)
+  (:import-from :Lunette.Controls
+                #:CCM_SETUNICODEFORMAT
+                #:CCM_GETUNICODEFORMAT)
   (:export #:TRACKBAR_CLASS
 
            #:TBS_AUTOTICKS

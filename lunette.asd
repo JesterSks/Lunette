@@ -64,14 +64,21 @@
              (:file "constants"   :depends-on ("package"))
              (:file "structures"  :depends-on ("package"))
              (:file "functions"   :depends-on ("package" "structures"))))
-   (:module "src/Dialogs"
+   (:module "src/Graphics"
             :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "constants"   :depends-on ("package"))
+             (:file "structures"  :depends-on ("package"))
+             (:file "functions"   :depends-on ("package" "structures"))))
+   (:module "src/Dialogs"
+            :depends-on ("src/System" "src/Graphics" "src/Messages")
             :components
             ((:file "package")
              (:file "constants" :depends-on ("package"))
              (:file "functions" :depends-on ("package"))))
    (:module "src/Dialogs/FileName"
-            :depends-on ("src")
+            :depends-on ("src/System")
             :components
             ((:file "package")
              (:file "constants"  :depends-on ("package"))
@@ -83,13 +90,6 @@
             ((:file "package")
              (:file "constants" :depends-on ("package"))
              (:file "functions" :depends-on ("package"))))
-   (:module "src/Graphics"
-            :depends-on ("src/System")
-            :components
-            ((:file "package")
-             (:file "constants"   :depends-on ("package"))
-             (:file "structures"  :depends-on ("package"))
-             (:file "functions"   :depends-on ("package" "structures"))))
    (:module "src/Files"
             :depends-on ("src/System")
             :components
@@ -115,8 +115,10 @@
             :depends-on ("src/System" "src/Graphics" "src/Windows")
             :components
             ((:file "package")
-             (:file "constants" :depends-on ("package"))
-             (:file "functions" :depends-on ("package"))))
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))
+             (:file "functions"  :depends-on ("package" "structures"))))
    (:module "src/Controls/Button"
             :depends-on ("src")
             :components
@@ -140,7 +142,7 @@
              (:file "constants" :depends-on ("package"))
              (:file "messages"  :depends-on ("package"))))
    (:module "src/Controls/Header"
-            :depends-on ("src" "src/Controls")
+            :depends-on ("src" "src/Controls" "src/Graphics" "src/Windows")
             :components
             ((:file "package")
              (:file "constants"  :depends-on ("package"))

@@ -16,11 +16,15 @@
 
 (defpackage :Lunette.Controls.Toolbar
   (:use :common-lisp
-        :cffi
-        :alexandria
-        :Lunette
-        :Lunette.Windows
-        :Lunette.Controls)
+        :Lunette.System)
+  (:import-from :cffi
+                #:defcstruct
+                #:defctype
+                #:defcfun)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Messages
+                #:WM_USER)
   (:export #:TOOLBARCLASSNAME
 
            #:TBSTYLE_TOOLTIPS

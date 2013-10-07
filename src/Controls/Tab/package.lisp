@@ -16,10 +16,17 @@
 
 (defpackage :Lunette.Controls.Tab
   (:use :common-lisp
-        :cffi
-        :alexandria
-        :Lunette.System
-        :Lunette.Controls)
+        :Lunette.System)
+  (:import-from :cffi
+                #:dfcunion
+                #:defcstruct
+                #:defctype
+                #:defcfun)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Controls
+                #:CCM_SETUNICODEFORMAT
+                #:CCM_GETUNICODEFORMAT)
   (:export #:WC_TABCONTROL
 
            #:TCIF_TEXT

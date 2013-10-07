@@ -16,11 +16,16 @@
 
 (defpackage :Lunette.Controls.PropertySheets
   (:use :common-lisp
-        :cffi
-        :alexandria
-        :Lunette.System
-        :Lunette.Windows
-        :Lunette.Controls)
+        :Lunette.System)
+  (:import-from :cffi
+                #:defcunion
+                #:defcstruct
+                #:defctype
+                #:defcfun)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Messages
+                #:WM_USER)
   (:export #:PSP_DEFAULT
            #:PSP_DLGINDIRECT
            #:PSP_USEHICON

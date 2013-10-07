@@ -54,6 +54,11 @@
            #:BOOL
            #:WCHAR
 
+           #:INT_PTR
+           #:DLGPROC
+           #:LPOFNHOOKPROC
+           #:UINT_PTR
+
            #:LPDWORD
 
            #:W32-ATOM
@@ -65,6 +70,7 @@
            #:LPCSTR
            #:LPCTSTR
            #:LPCWSTR
+           #:LPWSTR
 
            #:COLORREF
            #:LPCOLORREF
@@ -178,6 +184,12 @@
            #:y
            #:PPOINT
            #:LPPOINT
+
+           #:NMHDR
+           #:hWndFrom
+           #:idFrom
+           #:code
+           #:LPNMHDR
 
            #:GetSystemMetrics
            #:GetModuleHandle

@@ -14,20 +14,12 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.System)
+(in-package :Lunette.Controls)
 
-(defcstruct tagPOINT
-  (x :long)
-  (y :long))
-
-(defctype POINT   (:struct tagPOINT))
-(defctype PPOINT  (:pointer POINT))
-(defctype LPPOINT (:pointer POINT))
-
-(defcstruct tagNMHDR
-  (hWndFrom HWND)
-  (idFrom   UINT_PTR)
-  (code     :UINT))
-
-(defctype NMHDR   (:struct tagNMHDR))
-(defctype LPNMHDR (:pointer NMHDR))
+(define-constant CCM_FIRST                     #x2000)
+(define-constant CCM_SETBKCOLOR       (+ CCM_FIRST 1))
+(define-constant CCM_SETCOLORSCHEME   (+ CCM_FIRST 2))
+(define-constant CCM_GETCOLORSCHEME   (+ CCM_FIRST 3))
+(define-constant CCM_GETDROPTARGET    (+ CCM_FIRST 4))
+(define-constant CCM_SETUNICODEFORMAT (+ CCM_FIRST 5))
+(define-constant CCM_GETUNICODEFORMAT (+ CCM_FIRST 6))

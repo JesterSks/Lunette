@@ -17,6 +17,10 @@
 (defpackage :Lunette.Dialogs
   (:use #:common-lisp
         #:Lunette.System)
+  (:import-from :Lunette.Messages
+                #:LPMSG)
+  (:import-from :Lunette.Graphics
+                #:LPRECT)
   (:import-from :cffi
                 #:defcfun
                 #:defcstruct

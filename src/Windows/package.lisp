@@ -184,6 +184,25 @@
            #:lpszClassName
            #:PWNDCLASS
 
+           #:WNDCLASSEX
+;;;           #:cbSize
+           #:style
+           #:lpfnWndProc
+           #:cbClsExtra
+           #:cbWndExtra
+           #:hInstance
+           #:hIcon
+           #:hCursor
+           #:hbrBackground
+           #:lpszMenuName
+           #:lpszClassName
+           #:hIconSm
+           #:PWNDCLASSEX
+
+           #:WINDOWPOS
+           #:hwndInsertAfter
+           #:LPWINDOWPOS
+
            #:RegisterClass
            #:CreateWindowEx
            #:ShowWindow

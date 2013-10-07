@@ -15,10 +15,13 @@
 |#
 
 (defpackage :Lunette.Controls.ProgressBar
-  (:use :common-lisp
-        :alexandria
-        :Lunette.Windows
-        :Lunette.Controls)
+  (:use :common-lisp)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Messages
+                #:WM_USER)
+  (:import-from :Lunette.Controls
+                #:CCM_SETBKCOLOR)
   (:export #:PROGRESS_CLASS
 
            #:PBM_SETRANGE

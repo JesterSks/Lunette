@@ -30,3 +30,32 @@
 
 (defctype WNDCLASS  (:struct tagWNDCLASS))
 (defctype PWNDCLASS (:pointer WNDCLASS))
+
+(defcstruct tagWNDCLASSEX
+  (:cbSize       :UINT)
+  (style         :UINT)
+  (lpfnWndProc   WNDPROC)
+  (cbClsExtra    :INT)
+  (cbWndExtra    :INT)
+  (hInstance     HINSTANCE)
+  (hIcon         HICON)
+  (hCursor       HCURSOR)
+  (hbrBackground HBRUSH)
+  (lpszMenuName  LPCWSTR)
+  (lpszClassName LPCWSTR)
+  (hIconSm       HICON))
+
+(defctype WNDCLASSEX  (:struct tagWNDCLASSEX))
+(defctype PWNDCLASSEX (:pointer WNDCLASSEX))
+
+(defcstruct tagWINDOWPOS
+  (hwnd            HWND)
+  (hwndInsertAfter HWND)
+  (x               :INT)
+  (y               :INT)
+  (cx              :INT)
+  (cy              :INT)
+  (:flags          :INT))
+
+(defctype WINDOWPOS (:struct tagWINDOWPOS))
+(defctype LPWINDOWPOS (:pointer WINDOWPOS))

@@ -48,6 +48,11 @@
 (defctype BOOL  :int)
 (defctype WCHAR :unsigned-short)
 
+(defctype INT_PTR       :pointer)
+(defctype DLGPROC       :pointer)
+(defctype LPOFNHOOKPROC :pointer)
+(defctype UINT_PTR      :UINT)
+
 (defctype LPDWORD (:pointer DWORD))
 
 (defctype W32-ATOM WORD)
@@ -59,6 +64,7 @@
 (defctype LPCSTR  :string)
 (defctype LPCTSTR LPCSTR)
 (defctype LPCWSTR :string)
+(defctype LPWSTR  :string)
 
 (defctype COLORREF   DWORD)
 (defctype LPCOLORREF :pointer)

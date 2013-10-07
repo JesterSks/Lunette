@@ -16,10 +16,13 @@
 
 (defpackage :Lunette.Controls.Scrollbar
   (:use :common-lisp
-        :cffi
-        :alexandria
-        :Lunette.System
-        :Lunette.Controls)
+        :Lunette.System)
+  (:import-from :cffi
+                #:defcstruct
+                #:defctype
+                #:defcfun)
+  (:import-from :alexandria
+                #:define-constant)
   (:export #:SB_HORZ
            #:SB_VERT
            #:SB_CTL

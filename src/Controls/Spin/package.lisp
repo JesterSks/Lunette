@@ -15,10 +15,14 @@
 |#
 
 (defpackage :Lunette.Controls.Spin
-    (:use :common-lisp
-          :alexandria
-          :Lunette.Windows
-          :Lunette.Controls)
+    (:use :common-lisp)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Messages
+                #:WM_USER)
+  (:import-from :Lunette.Controls
+                #:CCM_SETUNICODEFORMAT
+                #:CCM_GETUNICODEFORMAT)
     (:export #:UPDOWN_CLASS
 
              #:UDS_WRAP

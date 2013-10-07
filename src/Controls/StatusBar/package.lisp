@@ -16,9 +16,15 @@
 
 (defpackage :Lunette.Controls.StatusBar
   (:use :common-lisp
-        :alexandria
-        :Lunette.Windows
         :Lunette.Controls)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Messages
+                #:WM_USER)
+  (:import-from :Lunette.Controls
+                #:CCM_SETUNICODEFORMAT
+                #:CCM_GETUNICODEFORMAT
+                #:CCM_SETBKCOLOR)
   (:export #:STATUSCLASSNAME
 
            #:SB_GETTEXT

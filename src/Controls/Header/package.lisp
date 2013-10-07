@@ -16,11 +16,19 @@
 
 (defpackage :Lunette.Controls.Header
   (:use :common-lisp
-        :cffi
-        :alexandria
-        :Lunette.System
-        :Lunette.Windows
-        :Lunette.Controls)
+        :Lunette.System)
+  (:import-from :cffi
+                #:defcstruct
+                #:defctype)
+  (:import-from :alexandria
+                #:define-constant)
+  (:import-from :Lunette.Graphics
+                #:LPRECT)
+  (:import-from :Lunette.Windows
+                #:LPWINDOWPOS)
+  (:import-from :Lunette.Controls
+                #:CCM_SETUNICODEFORMAT
+                #:CCM_GETUNICODEFORMAT)
   (:export #:WC_HEADER
 
            #:HDI_WIDTH
