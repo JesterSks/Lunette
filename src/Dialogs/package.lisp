@@ -28,5 +28,28 @@
                 #:foreign-slot-value)
   (:import-from :alexandria
                 #:define-constant)
-  (:export #:GetDlgItem
-           #:GetDialogBaseUnits))
+  (:export #:IDOK
+           #:IDCANCEL
+           #:IDABORT
+           #:IDRETRY
+           #:IDIGNORE
+           #:IDYES
+           #:IDNO
+           #:IDCLOSE
+           #:IDHELP
+           #:IDTRYAGAIN
+           #:IDCONTINUE
+           #:IDTIMEOUT
+
+           #:GetDlgItem
+           #:SetDlgItemInt
+           #:GetDlgItemInt
+           #:GetDlgItemText
+           #:SetDlgItemText
+           #:GetDialogBaseUnits
+           #:EndDialog
+           #:MapDialogRect
+           #:DiglogBoxParam
+           #:CreateDialogParam
+           #:SendDlgItemMessage
+           #:IsDialogMessage))
