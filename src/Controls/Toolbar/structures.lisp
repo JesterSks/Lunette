@@ -14,27 +14,27 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Toolbar)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
+(defcstruct _TBBUTTON
+  (iBitmap   :INT)
+  (idCommand :INT)
+  (fsState   BYTE)
+  (fsStyle   BYTE)
+  #+CFFI-FEATURES:x86-64
+  (bReserved BYTE :count 6)
+  #+CFFI-FEATURES:x86
+  (bReserved BYTE :count 2)
+  (dwData DWORD_PTR)
+  (iString INT_PTR))
 
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
+(defctype TBBUTTON (:struct _TBBUTTON))
+(defctype LPTBBUTTON (:pointer TBBUTTON))
+(defctype LPCTBBUTTON (:pointer TBBUTTON))
 
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
+(defcstruct _TBADDBITMAP
+  (hInstTB HINSTANCE)
+  (nID     UINT_PTR))
 
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+(defctype TBADDBITMAP (:struct _TBADDBITMAP))
+(defctype LPTBADDBITMAP (:pointer TBADDBITMAP))

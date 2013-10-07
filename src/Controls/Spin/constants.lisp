@@ -14,27 +14,16 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Spin)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
+(define-constant UPDOWN_CLASS   "msctls_updown32" :test #'string=)
 
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+(define-constant UDS_WRAP        #x0001)
+(define-constant UDS_SETBUDDYINT #x0002)
+(define-constant UDS_ALIGNRIGHT  #x0004)
+(define-constant UDS_ALIGNLEFT   #x0008)
+(define-constant UDS_AUTOBUDDY   #x0010)
+(define-constant UDS_ARROWKEYS   #x0020)
+(define-constant UDS_HORZ        #x0040)
+(define-constant UDS_NOTHOUSANDS #x0080)
+(define-constant UDS_HOTTRACK    #x0100)

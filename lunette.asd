@@ -117,6 +117,86 @@
             ((:file "package")
              (:file "constants" :depends-on ("package"))
              (:file "functions" :depends-on ("package"))))
+   (:module "src/Controls/Calendar"
+            :depends-on ("src" "src/Controls")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
+   (:module "src/Controls/Header"
+            :depends-on ("src" "src/Controls")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))))
+   (:module "src/Controls/ListBox"
+            :depends-on ("src" "src/Controls")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
+   (:module "src/Controls/ProgressBar"
+            :depends-on ("src" "src/Controls" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
+   (:module "src/Controls/PropertySheets"
+            :depends-on ("src" "src/Controls" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))
+             (:file "functions"  :depends-on ("package" "structures"))))
+   (:module "src/Controls/Scrollbar"
+            :depends-on ("src" "src/Controls")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))
+             (:file "functions"  :depends-on ("package" "structures"))))
+   (:module "src/Controls/Spin"
+            :depends-on ("src" "src/Controls" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
+   (:module "src/Controls/StatusBar"
+            :depends-on ("src" "src/Controls" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
+   (:module "src/Controls/Tab"
+            :depends-on ("src" "src/Controls")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))))
+   (:module "src/Controls/Toolbar"
+            :depends-on ("src" "src/Controls" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))))
+   (:module "src/Controls/Trackbar"
+            :depends-on ("src" "src/Controls" "src/Windows")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
+   (:module "src/Controls/TreeView"
+            :depends-on ("src" "src/Controls")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "messages"   :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))))
    (:module "src"
             :depends-on ("src/Messages" "src/Windows" "src/Graphics")
             :components

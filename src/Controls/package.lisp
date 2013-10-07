@@ -18,7 +18,8 @@
   (:use #:common-lisp
         #:Lunette.System)
   (:import-from :cffi
-                #:defcfun)
+                #:defcfun
+                #:defcstruct)
   (:import-from :alexandria
                 #:define-constant)
   (:import-from :Lunette.Graphics
@@ -230,6 +231,12 @@
            #:LB_ERR
            #:LB_ERRSPACE
 
+           #:tagINITCOMMONCONTROLSEX
+           #:dwSize
+           #:dwICC
+           #:LPINITCOMMONCONTROLSEX
+
            #:ScrollWindowEx
            #:SetScrollRange
-           #:SetScrollPos))
+           #:SetScrollPos
+           #:InitCommonControlsEx))

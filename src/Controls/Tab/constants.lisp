@@ -14,27 +14,12 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Tab)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
+(define-constant WC_TABCONTROL "SysTabControl32" :test #'string=)
 
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+(define-constant TCIF_TEXT       #x0001)
+(define-constant TCIF_IMAGE      #x0002)
+(define-constant TCIF_RTLREADING #x0004)
+(define-constant TCIF_PARAM      #x0008)
+(define-constant TCIF_STATE      #x0010)

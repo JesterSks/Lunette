@@ -14,27 +14,10 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Scrollbar)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
-
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+;;; Scroll Bar Constants
+(define-constant SB_HORZ 0)
+(define-constant SB_VERT 1)
+(define-constant SB_CTL  2)
+(define-constant SB_BOTH 3)

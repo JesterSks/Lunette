@@ -14,27 +14,15 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Scrollbar)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
+(defcfun "GetScrollInfo" BOOL
+  (hwnd HWND)
+  (fnBar :INT)
+  (lpsi LPSCROLLINFO))
 
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+(defcfun "SetScrollInfo" :INT
+  (hwnd HWND)
+  (fnBar :INT)
+  (lpsi LPCSCROLLINFO)
+  (fRedraw BOOL))

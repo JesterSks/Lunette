@@ -14,27 +14,14 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Trackbar)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
-
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+(define-constant TB_LINEUP        0)
+(define-constant TB_LINEDOWN      1)
+(define-constant TB_PAGEUP        2)
+(define-constant TB_PAGEDOWN      3)
+(define-constant TB_THUMBPOSITION 4)
+(define-constant TB_THUMBTRACK    5)
+(define-constant TB_TOP           6)
+(define-constant TB_BOTTOM        7)
+(define-constant TB_ENDTRACK      8)

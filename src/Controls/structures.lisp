@@ -16,25 +16,9 @@
 
 (in-package :Lunette.Controls)
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
+(defcstruct tagINITCOMMONCONTROLSEX
+  (dwSize DWORD)
+  (dwICC  DWORD))
 
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+(defctype INITCOMMONCONTROLSEX (:struct tagINITCOMMONCONTROLSEX))
+(defctype LPINITCOMMONCONTROLSEX (:pointer INITCOMMONCONTROLSEX))

@@ -14,27 +14,20 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(defpackage :Lunette.Controls.ProgressBar
+  (:use :common-lisp
+        :alexandria
+        :Lunette.Windows
+        :Lunette.Controls)
+  (:export #:PROGRESS_CLASS
 
-(defcfun "ScrollWindow" :int
-  (hWnd HWND)
-  (dx :int)
-  (dy :int)
-  (prcScroll (:pointer RECT))
-  (prcClip (:pointer RECT)))
-
-(defcfun "SetScrollRange" BOOL
-  (hWnd HWND)
-  (nBar :INT)
-  (nMinPos :INT)
-  (nMaxPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "SetScrollPos" :INT
-  (hWnd HWND)
-  (nBar :INT)
-  (nPos :INT)
-  (bRedraw BOOL))
-
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+           #:PBM_SETRANGE
+           #:PBM_SETPOS
+           #:PBM_DELTAPOS
+           #:PBM_SETSTEP
+           #:PBM_STEPIT
+           #:PBM_SETRANGE32
+           #:PBM_GETRANGE
+           #:PBM_GETPOS
+           #:PBM_SETBARCOLOR
+           #:PBM_SETBKCOLOR))
