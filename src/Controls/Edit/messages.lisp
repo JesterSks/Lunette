@@ -14,7 +14,16 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette.Controls.Edit)
 
-(defcfun "InitCommonControlsEx" BOOL
-  (lpInitCtrls LPINITCOMMONCONTROLSEX))
+;;; Edit Control Notification Codes
+(define-constant EN_SETFOCUS     #x0100)
+(define-constant EN_KILLFOCUS    #x0200)
+(define-constant EN_CHANGE       #x0300)
+(define-constant EN_UPDATE       #x0400)
+(define-constant EN_ERRSPACE     #x0500)
+(define-constant EN_MAXTEXT      #x0501)
+(define-constant EN_HSCROLL      #x0601)
+(define-constant EN_VSCROLL      #x0602)
+(define-constant EN_ALIGN_LTR_EC #x0700)
+(define-constant EN_ALIGN_RTL_EC #x0701)

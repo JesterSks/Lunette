@@ -18,9 +18,41 @@
   (:use :common-lisp
         :alexandria
         :Lunette.Controls)
+  (:import-from :Lunette.Windows
+                #:WS_VSCROLL
+                #:WS_BORDER)
   (:export #:LB_OKAY
            #:LB_ERR
            #:LB_ERRSPACE
+
+           #:LBS_NOTIFY
+           #:LBS_SORT
+           #:LBS_NOREDRAW
+           #:LBS_MULTIPLESEL
+           #:LBS_OWNERDRAWFIXED
+           #:LBS_OWNERDRAWVARIABLE
+           #:LBS_HASSTRINGS
+           #:LBS_USETABSTOPS
+           #:LBS_NOINTEGRALHEIGHT
+           #:LBS_MULTICOLUMN
+           #:LBS_WANTKEYBOARDINPUT
+           #:LBS_EXTENDEDSEL
+           #:LBS_DISABLENOSCROLL
+           #:LBS_NODATA
+           #:LBS_NOSEL
+           #:LBS_COMBOBOX
+           #:LBS_STANDARD
+
+           #:DDL_READWRITE
+           #:DDL_READONLY
+           #:DDL_HIDDEN
+           #:DDL_SYSTEM
+           #:DDL_DIRECTORY
+           #:DDL_ARCHIVE
+
+           #:DDL_POSTMSGS
+           #:DDL_DRIVES
+           #:DDL_EXCLUSIVE
 
            #:LB_ADDSTRING
            #:LB_INSERTSTRING

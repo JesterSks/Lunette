@@ -117,6 +117,22 @@
             ((:file "package")
              (:file "constants" :depends-on ("package"))
              (:file "functions" :depends-on ("package"))))
+   (:module "src/Controls/Button"
+            :depends-on ("src")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))))
+   (:module "src/Controls/Static"
+            :depends-on ("src")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))))
+   (:module "src/Controls/Edit"
+            :depends-on ("src")
+            :components
+            ((:file "package")
+             (:file "constants" :depends-on ("package"))
+             (:file "messages"  :depends-on ("package"))))
    (:module "src/Controls/Calendar"
             :depends-on ("src" "src/Controls")
             :components

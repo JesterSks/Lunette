@@ -25,6 +25,17 @@
            #:SB_CTL
            #:SB_BOTH
 
+           #:SBS_HORZ
+           #:SBS_VERT
+           #:SBS_TOPALIGN
+           #:SBS_LEFTALIGN
+           #:SBS_BOTTOMALIGN
+           #:SBS_RIGHTALIGN
+           #:SBS_SIZEBOXTOPLEFTALIGN
+           #:SBS_SIZEBOXBOTTOMRIGHTALIGN
+           #:SBS_SIZEBOX
+           #:SBS_SIZEGRIP
+
            #:SB_LINEUP
            #:SB_LINELEFT
            #:SB_LINEDOWN
@@ -63,4 +74,7 @@
            #:LPCSCROLLINFO
 
            #:GetScrollInfo
-           #:SetScrollInfo))
+           #:SetScrollInfo
+           #:ScrollWindowEx
+           #:SetScrollRange
+           #:SetScrollPos))
