@@ -68,7 +68,15 @@
             :depends-on ("src/System")
             :components
             ((:file "package")
+             (:file "constants" :depends-on ("package"))
              (:file "functions" :depends-on ("package"))))
+   (:module "src/Dialogs/FileName"
+            :depends-on ("src")
+            :components
+            ((:file "package")
+             (:file "constants"  :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))
+             (:file "functions"  :depends-on ("package" "structures"))))
    (:module "src/Dialogs/MessageBox"
             :depends-on ("src/System")
             :components
