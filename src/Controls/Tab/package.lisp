@@ -18,7 +18,7 @@
   (:use :common-lisp
         :Lunette.System)
   (:import-from :cffi
-                #:dfcunion
+                #:defcunion
                 #:defcstruct
                 #:defctype
                 #:defcfun)

@@ -45,6 +45,13 @@
            #:IDCONTINUE
            #:IDTIMEOUT
 
+           #:DLGTEMPLATE
+           #:style
+           #:dwExtendedStyle
+           #:cdit
+           #:LPDLGTEMPLATE
+           #:LPCDLGTEMPLATE
+
            #:GetDlgItem
            #:SetDlgItemInt
            #:GetDlgItemInt

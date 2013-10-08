@@ -32,6 +32,9 @@
 (defctype HMENU   HANDLE)
 (defctype HFONT   HANDLE)
 (defctype HBITMAP HANDLE)
+(defctype HPROPSHEETPAGE HANDLE)
+(defctype HPALETTE HANDLE)
+(defctype HTREEITEM HANDLE)
 
 (defctype WNDPROC :pointer)
 
@@ -48,10 +51,13 @@
 (defctype BOOL  :int)
 (defctype WCHAR :unsigned-short)
 
-(defctype INT_PTR       :pointer)
-(defctype DLGPROC       :pointer)
-(defctype LPOFNHOOKPROC :pointer)
-(defctype UINT_PTR      :UINT)
+(defctype INT_PTR              :pointer)
+(defctype DLGPROC              :pointer)
+(defctype LPOFNHOOKPROC        :pointer)
+(defctype UINT_PTR             :UINT)
+(defctype LPFNPSPCALLBACK      :pointer)
+(defctype PFNPROPSHEETCALLBACK :pointer)
+(defctype DWORD_PTR            :pointer)
 
 (defctype LPDWORD (:pointer DWORD))
 
@@ -65,6 +71,7 @@
 (defctype LPCTSTR LPCSTR)
 (defctype LPCWSTR :string)
 (defctype LPWSTR  :string)
+(defctype LPSTR   :string)
 
 (defctype COLORREF   DWORD)
 (defctype LPCOLORREF :pointer)

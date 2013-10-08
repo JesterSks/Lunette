@@ -38,6 +38,9 @@
            #:HMENU
            #:HFONT
            #:HBITMAP
+           #:HPROPSHEETPAGE
+           #:HPALETTE
+           #:HTREEITEM
 
            #:WNDPROC
 
@@ -58,6 +61,9 @@
            #:DLGPROC
            #:LPOFNHOOKPROC
            #:UINT_PTR
+           #:LPFNPSPCALLBACK
+           #:PFNPROPSHEETCALLBACK
+           #:DWORD_PTR
 
            #:LPDWORD
 
@@ -71,6 +77,7 @@
            #:LPCTSTR
            #:LPCWSTR
            #:LPWSTR
+           #:LPSTR
 
            #:COLORREF
            #:LPCOLORREF

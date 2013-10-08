@@ -19,8 +19,10 @@
         :Lunette.System)
   (:import-from :cffi
                 #:make-pointer
+                #:pointerp
                 #:defcstruct
-                #:defctype)
+                #:defctype
+                #:defcunion)
   (:import-from :alexandria
                 #:define-constant)
   (:import-from :Lunette.Controls

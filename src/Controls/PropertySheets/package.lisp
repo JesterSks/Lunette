@@ -26,6 +26,8 @@
                 #:define-constant)
   (:import-from :Lunette.Messages
                 #:WM_USER)
+  (:import-from :Lunette.Dialogs
+                #:LPCDLGTEMPLATE)
   (:export #:PSP_DEFAULT
            #:PSP_DLGINDIRECT
            #:PSP_USEHICON

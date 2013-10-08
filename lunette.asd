@@ -75,8 +75,9 @@
             :depends-on ("src/System" "src/Graphics" "src/Messages")
             :components
             ((:file "package")
-             (:file "constants" :depends-on ("package"))
-             (:file "functions" :depends-on ("package"))))
+             (:file "constants"  :depends-on ("package"))
+             (:file "structures" :depends-on ("package"))
+             (:file "functions"  :depends-on ("package"))))
    (:module "src/Dialogs/FileName"
             :depends-on ("src/System")
             :components
@@ -161,7 +162,7 @@
              (:file "constants" :depends-on ("package"))
              (:file "messages"  :depends-on ("package"))))
    (:module "src/Controls/PropertySheets"
-            :depends-on ("src" "src/Controls" "src/Windows")
+            :depends-on ("src" "src/Controls" "src/Windows" "src/Dialogs")
             :components
             ((:file "package")
              (:file "constants"  :depends-on ("package"))
