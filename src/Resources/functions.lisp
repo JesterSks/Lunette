@@ -23,3 +23,31 @@
 (defcfun ("LoadCursorW" LoadCursor) HCURSOR
   (hInstance    HINSTANCE)
   (lpCursorName LPCTSTR))
+
+(defcfun ("EnumResourceTypesW" EnumResourceTypes) BOOL
+  (hModule HMODULE)
+  (lpEnumFunc ENUMRESTYPEPROC)
+  (lParam LONG_PTR))
+
+(defcfun ("EnumResourceNamesW" EnumResourceNames) BOOL
+  (hModule HMODULE)
+  (lpszType :long)
+  (lpEnumFunc ENUMRESNAMEPROC)
+  (lParam LONG_PTR))
+
+(defcfun ("FindResourceW" FindResource) HRSRC
+  (hModule HMODULE)
+  (lpName :long)
+  (lpType :long))
+
+(defcfun ("LoadImageW" LoadImage) HANDLE
+  (hinst HINSTANCE)
+  (lpszName :long)
+  (uType :uint)
+  (cxDesired :int)
+  (cyDesired :int)
+  (fuLoad :uint))
+
+(defcfun ("LoadBitmapW" LoadBitmap) HBITMAP
+  (hInstance HINSTANCE)
+  (lpBitmapName :long))
