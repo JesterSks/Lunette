@@ -282,3 +282,51 @@
   (yTop    :INT)
   (xRight  :INT)
   (yBottom :INT))
+
+(defcfun "CreateCompatibleDC" HDC
+  (hdc HDC))
+
+(defcfun "BitBlt" BOOL
+  (hdcDest HDC)
+  (nXDest  :INT)
+  (nYDest  :INT)
+  (nWidth  :INT)
+  (nHeight :INT)
+  (hdcSrc  HDC)
+  (nXSrc   :INT)
+  (nYSrc   :INT)
+  (dwRop   DWORD))
+
+(defcfun "CreateCompatibleBitmap" HBITMAP
+  (hdc HDC)
+  (nWidth :INT)
+  (nHeight :INT))
+
+(defcfun "PatBlt" BOOL
+  (hdc HDC)
+  (nXLeft :INT)
+  (nYLeft :INT)
+  (nWidth :INT)
+  (nHeight :INT)
+  (dwRop DWORD))
+
+(defcfun "SetWorldTransform" BOOL
+  (hdc HDC)
+  (lpXform (:pointer XFORM)))
+
+(defcfun "SetGraphicsMode" :INT
+  (hdc   HDC)
+  (iMode :INT))
+
+(defcfun "SetWindowExtEx" BOOL
+  (hdc      HDC)
+  (nXExtent :INT)
+  (nYExtent :INT)
+  (lpSize   LPSIZE))
+
+(defcfun ("ImageList_Create" ImageList_Create) HIMAGELIST
+  (cx       :INT)
+  (cy       :INT)
+  (flags    :UINT)
+  (cInitial :INT)
+  (cGrow    :INT))

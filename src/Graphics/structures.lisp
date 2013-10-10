@@ -51,3 +51,15 @@
 (defctype DRAWITEMSTRUCT (:struct tagDRAWITEMSTRUCT))
 (defctype PDRAWITEMSTRUCT (:pointer DRAWITEMSTRUCT))
 (defctype LPDRAWITEMSTRUCT (:pointer DRAWITEMSTRUCT))
+
+(defcstruct _XFORM
+  (eM11  :FLOAT)
+  (eM12  :FLOAT)
+  (eM21  :FLOAT)
+  (eM22  :FLOAT)
+  (eDx   :FLOAT)
+  (eDy   :FLOAT))
+
+(defctype XFORM   (:struct _XFORM))
+(defctype PXFORM  (:pointer XFORM))
+(defctype LPXFORM (:pointer XFORM))

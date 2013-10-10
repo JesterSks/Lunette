@@ -19,6 +19,13 @@
 (defcfun ("RegisterClassW" RegisterClass) W32-ATOM
   (lpwcx (:pointer WNDCLASS)))
 
+(defcfun ("RegisterClassExW" RegisterClassEx) W32-ATOM
+  (lpwcx (:pointer WNDCLASSEX)))
+
+(defcfun ("UnregisterClassW" UnregisterClass) BOOL
+  (lpClassName LPCTSTR)
+  (hInstance HINSTANCE))
+
 (defcfun ("CreateWindowExW" CreateWindowEx) HWND
   (dwExStyle    DWORD)
   (lpClassName  LPCTSTR)
@@ -38,6 +45,12 @@
   (nCmdShow :INT))
 
 (defcfun "UpdateWindow" BOOL
+  (hWnd HWND))
+
+(defcfun "DestroyWindow" BOOL
+  (hWnd HWND))
+
+(defcfun "IsWindow" BOOL
   (hWnd HWND))
 
 (defcfun ("DefWindowProcW" DefWindowProc) LRESULT
@@ -84,6 +97,15 @@
   (nHeight  :int)
   (bRepaint BOOL))
 
+(defcfun "SetWindowPos" BOOL
+  (hWnd HWND)
+  (hWndInsertAfter HWND)
+  (x :INT)
+  (y :INT)
+  (cx :INT)
+  (cy :INT)
+  (uFlags :UINT))
+
 (defcfun ("SetWindowLongW" SetWindowLong) :LONG
   (hWnd      HWND)
   (nIndex    :int)
@@ -127,6 +149,10 @@
   (Msg :UINT)
   (wParam WPARAM)
   (lParam LPARAM))
+
+(defcfun "SetMenu" BOOL
+  (hWnd HWND)
+  (hMenu HMENU))
 
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))

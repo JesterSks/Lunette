@@ -35,6 +35,10 @@
 (defctype HPROPSHEETPAGE HANDLE)
 (defctype HPALETTE HANDLE)
 (defctype HTREEITEM HANDLE)
+(defctype HRSRC     HANDLE)
+(defctype HGLOBAL   HANDLE)
+(defctype HACCEL    HANDLE)
+(defctype HIMAGELIST HANDLE)
 
 (defctype WNDPROC :pointer)
 
@@ -58,6 +62,12 @@
 (defctype LPFNPSPCALLBACK      :pointer)
 (defctype PFNPROPSHEETCALLBACK :pointer)
 (defctype DWORD_PTR            :pointer)
+(defctype TIMERPROC            :pointer)
+(defctype ENUMRESTYPEPROC      :pointer)
+(defctype ENUMRESNAMEPROC      :pointer)
+(defctype LONG_PTR             :long)
+(defctype FONTENUMPROC         :pointer)
+(defctype LPINT                :pointer)
 
 (defctype LPDWORD (:pointer DWORD))
 

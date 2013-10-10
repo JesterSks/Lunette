@@ -52,4 +52,15 @@
            #:IDC_HELP
 
            #:LoadIcon
-           #:LoadCursor))
+           #:LoadCursor
+           #:EnumResourceTypes
+           #:EnumResourceNames
+           #:FindResource
+           #:LoadImage
+           #:LoadImage
+           #:LoadBitmap
+           #:FreeLibrary
+           #:LoadResource
+           #:LoadLibrary
+           #:LoadMenu
+           #:LoadAccelerators))

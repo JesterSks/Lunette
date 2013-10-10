@@ -188,6 +188,15 @@
            #:rgbReserved
            #:LPPAINTSTRUCT
 
+           #:XFORM
+           #:eM11
+           #:eM12
+           #:eM21
+           #:eM22
+           #:eDx
+           #:eDy
+           #:LPXFORM
+
            #:GetStockObject
            #:BeginPaint
            #:EndPaint
@@ -234,4 +243,12 @@
            #:FrameRect
            #:FillRect
            #:InvertRect
-           #:SetRect))
+           #:SetRect
+           #:CreateCompatibleDC
+           #:BitBlt
+           #:CreateCompatibleBitmap
+           #:PatBlt
+           #:SetWorldTransform
+           #:SetGraphicsMode
+           #:SetWindowExtEx
+           #:ImageList_Create))

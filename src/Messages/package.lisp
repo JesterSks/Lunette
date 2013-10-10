@@ -259,6 +259,12 @@
            #:WM_USER
            #:WM_APP
 
+           #:TTN_FIRST
+           #:TTN_LAST
+           #:TTN_GETDISPINFOA
+           #:TTN_GETDISPINFOW
+           #:TTN_GETDISPINFO
+
            #:MSG
            #:hwnd
            #:message
@@ -273,4 +279,6 @@
            #:TranslateMessage
            #:DispatchMessage
            #:PostQuitMessage
-           #:SendMessage))
+           #:SendMessage
+           #:PostMessage
+           #:TranslateAccelerator))

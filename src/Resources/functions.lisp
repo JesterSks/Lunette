@@ -51,3 +51,21 @@
 (defcfun ("LoadBitmapW" LoadBitmap) HBITMAP
   (hInstance HINSTANCE)
   (lpBitmapName :long))
+
+(defcfun "FreeLibrary" BOOL
+  (hModule HMODULE))
+
+(defcfun "LoadResource" HGLOBAL
+  (hModule HMODULE)
+  (hResInfo HRSRC))
+
+(defcfun ("LoadLibraryW" LoadLibrary) HMODULE
+  (lpFileName LPCTSTR))
+
+(defcfun ("LoadMenuW" LoadMenu) HMENU
+  (hInstance HINSTANCE)
+  (lpMenuName LPCTSTR))
+
+(defcfun ("LoadAcceleratorsW" LoadAccelerators) HACCEL
+  (hInstance HINSTANCE)
+  (lpTableName LPCTSTR))

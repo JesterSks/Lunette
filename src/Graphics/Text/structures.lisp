@@ -42,3 +42,98 @@
 (defctype PTEXTMETRIC (:pointer TEXTMETRIC))
 (defctype NPTEXTMETRIC PTEXTMETRIC)
 (defctype LPTEXTMETRIC PTEXTMETRIC)
+
+(defcstruct tagLOGFONT
+  (lfHeight                 :LONG)
+  (lfWidth                  :LONG)
+  (lfEscapement             :LONG)
+  (lfOrientation            :LONG)
+  (lfWeight                 :LONG)
+  (lfItalic                 BYTE)
+  (lfUnderline              BYTE)
+  (lfStrikeOut              BYTE)
+  (lfCharSet                BYTE)
+  (lfOutPrecision           BYTE)
+  (lfClipPrecision          BYTE)
+  (lfQuality                BYTE)
+  (lfPitchAndFamily         BYTE)
+  ;;SHOULD be (lfFaceName WCHAR :count LF_FACESIZE)
+  ;;but the defstruct macro doesn't expand constants correctly
+  (lfFaceName               WCHAR :count 32))
+
+(defctype LOGFONT (:struct tagLOGFONT))
+(defctype LPLOGFONT (:pointer LOGFONT))
+
+(defcstruct tagENUMLOGFONTEX
+  (elfLogFont  LOGFONT)
+  ;;SHOULD be
+  ;;(elfFullName WCHAR :count LF_FULLFACESIZE)
+  ;;(elfStyle    WCHAR :count LF_FACESIZE)
+  ;;(elfScript   WCHAR :count LF_FACESIZE)
+  ;;but the defstruct macro doesn't expand constants correctly
+  (elfFullName WCHAR :count 64)
+  (elfStyle    WCHAR :count 32)
+  (elfScript   WCHAR :count 32))
+
+(defctype ENUMLOGFONTEX (:struct tagENUMLOGFONTEX))
+(defctype LPENUMLOGFONTEX (:pointer ENUMLOGFONTEX))
+
+(defcstruct tagDESIGNVECTOR
+  (dvReserved DWORD)
+  (dvNumAxes  DWORD)
+  ;;SHOULD be (dvValues :LONG :count mm_max_numaxes)
+  ;;but CFFI doesn't handle constants in the structure definition.
+  (dvValues   :LONG :count 16))
+
+(defctype DESIGNVECTOR   (:struct tagDESIGNVECTOR))
+(defctype PDESIGNVECTOR  (:pointer DESIGNVECTOR))
+(defctype LPDESIGNVECTOR (:pointer DESIGNVECTOR))
+
+(defcstruct tagENUMLOGFONTEXDV
+  (elfEnumLogFontEx ENUMLOGFONTEX)
+  (elfDesignVector DESIGNVECTOR))
+
+(defctype ENUMLOGFONTEXDV (:struct tagENUMLOGFONTEXDV))
+(defctype LPENUMLOGFONTEXDV (:pointer ENUMLOGFONTEXDV))
+
+(defcstruct tagNEWTEXTMETRIC
+  (tmHeight           :LONG)
+  (tmAscent           :LONG)
+  (tmDescent          :LONG)
+  (tmInternalLeading  :LONG)
+  (tmExternalLeading  :LONG)
+  (tmAveCharWidth     :LONG)
+  (tmMaxCharWidth     :LONG)
+  (tmWeight           :LONG)
+  (tmOverhang         :LONG)
+  (tmDigitizedAspectX :LONG)
+  (tmDigitizedAspectY :LONG)
+  (tmFirstChar        WCHAR)
+  (tmLastChar         WCHAR)
+  (tmDefaultChar      WCHAR)
+  (tmBreakChar        WCHAR)
+  (tmItalic            BYTE)
+  (tmUnderlined        BYTE)
+  (tmStruckOut         BYTE)
+  (tmPitchAndFamily    BYTE)
+  (tmCharSet           BYTE)
+  (ntmFlags           DWORD)
+  (ntmSizeEM          :UINT)
+  (ntmCellHeight      :UINT)
+  (ntmAvgWidth        :UINT))
+
+(defctype NEWTEXTMETRIC (:struct tagNEWTEXTMETRIC))
+(defctype LPNEWTEXTMETRIC (:pointer NEWTEXTMETRIC))
+
+(defcstruct tagFONTSIGNATURE
+  (fsUsb DWORD :count 4)
+  (fsCsb DWORD :count 2))
+
+(defctype FONTSIGNATURE  (:struct tagFONTSIGNATURE))
+(defctype PFONTSIGNATURE (:pointer FONTSIGNATURE))
+
+(defcstruct tagNEWTEXTMETRICEX
+  (ntmTm      NEWTEXTMETRIC)
+  (ntmFontSig FONTSIGNATURE))
+
+(defctype NEWTEXTMETRICEX (:struct tagNEWTEXTMETRICEX))

@@ -41,6 +41,10 @@
            #:HPROPSHEETPAGE
            #:HPALETTE
            #:HTREEITEM
+           #:HRSRC
+           #:HGLOBAL
+           #:HACCEL
+           #:HIMAGELIST
 
            #:WNDPROC
 
@@ -64,6 +68,12 @@
            #:LPFNPSPCALLBACK
            #:PFNPROPSHEETCALLBACK
            #:DWORD_PTR
+           #:TIMERPROC
+           #:ENUMRESTYPEPROC
+           #:ENUMRESNAMEPROC
+           #:LONG_PTR
+           #:FONTENUMPROC
+           #:LPINT
 
            #:LPDWORD
 
@@ -192,11 +202,38 @@
            #:PPOINT
            #:LPPOINT
 
+           #:SIZE
+           #:cx
+           #:cy
+           #:PSIZE
+           #:LPSIZE
+
            #:NMHDR
            #:hWndFrom
            #:idFrom
            #:code
            #:LPNMHDR
+
+           #:NMTTDISPINFO
+           #:hdr
+           #:lpszText
+           #:szText
+;;;           #:hinst
+           #:uFlags
+;;;           #:lParam
+           #:LPNMTTDISPINFO
+
+           #:SYSTEMTIME
+           #:wYear
+           #:wMonth
+           #:wDayOfWeek
+           #:wDay
+           #:wHour
+           #:wMinute
+           #:wSecond
+           #:wMilliseconds
+           #:PSYSTEMTIME
+           #:LPSYSTEMTIME
 
            #:GetSystemMetrics
            #:GetModuleHandle
@@ -204,6 +241,13 @@
            #:FreeEnvironmentStrings
            #:GetEnvironmentVariable
            #:CloseHandle
+           #:WriteConsole
+           #:GetDoubleClickTime
+           #:SetDoubleClickTime
+           #:SetTimer
+           #:KillTimer
+           #:GetStdHandle
+
            #:loword
            #:hiword
            #:makelong))

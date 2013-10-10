@@ -26,6 +26,7 @@
   (:import-from :alexandria
                 #:define-constant)
   (:import-from :Lunette.Graphics
+                #:RECT
                 #:LPRECT)
   (:export #:FW_DONTCARE
            #:FW_THIN
@@ -156,6 +157,55 @@
            #:NPTEXTMETRIC
            #:LPTEXTMETRIC
 
+           #:LOGFONT
+           #:lfHeight
+           #:lfWidth
+           #:lfEscapement
+           #:lfOrientation
+           #:lfWeight
+           #:lfItalic
+           #:lfUnderline
+           #:lfStrikeOut
+           #:lfCharSet
+           #:lfOutPrecision
+           #:lfClipPrecision
+           #:lfQuality
+           #:lfPitchAndFamily
+           #:lfFaceName
+           #:LPLOGFONT
+
+           #:ENUMLOGFONTEX
+           #:elfLogFont
+           #:elfFullName
+           #:elfStyle
+           #:elfScript
+           #:LPENUMLOGFONTEX
+
+           #:DESIGNVECTOR
+           #:dvReserved
+           #:dvNumAxes
+           #:dvValues
+           #:LPDESIGNVECTOR
+
+           #:ENUMLOGFONTEXDV
+           #:elfEnumLogFontEx
+           #:elfDesignVector
+           #:LPENUMLOGFONTEXDV
+
+           #:NEWTEXTMETRIC
+           #:ntmFlags
+           #:ntmSizeEM
+           #:ntmCellHeight
+           #:ntmAvgWidth
+           #:LPNEWTEXTMETRIC
+
+           #:FONTSIGNATURE
+           #:fsUsb
+           #:fsCsb
+
+           #:NEWTEXTMETRICEX
+           #:ntmTm
+           #:ntmFontSig
 
            #:TextOut
            #:text-out
@@ -167,4 +217,8 @@
            #:HideCaret
            #:DestroyCaret
            #:SetTextColor
-           #:draw-text))
+           #:draw-text
+           #:GetTextExtendPoint32
+           #:EnumFontFamiliesEx
+           #:ExtTextOut
+           #:TabbedTextOut))

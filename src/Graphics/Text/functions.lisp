@@ -109,3 +109,36 @@
 (defun draw-text (hdc str rect uformat)
   (with-foreign-string (cstr str)
                        (DrawText hdc cstr (length str) rect uformat)))
+
+(defcfun ("GetTextExtentPoint32W" GetTextExtentPoint32) BOOL
+  (hdc HDC)
+  (lpString LPCSTR)
+  (c :INT)
+  (lpSize LPSIZE))
+
+(defcfun ("EnumFontFamiliesExW" EnumFontFamiliesEx) :INT
+  (hdc HDC)
+  (lpLogfont LPLOGFONT)
+  (lpEnumFontFamExProc FONTENUMPROC)
+  (lParam LPARAM)
+  (dwFlags DWORD))
+
+(defcfun ("ExtTextOutW" ExtTextOut) BOOL
+  (hdc HDC)
+  (x :INT)
+  (y :INT)
+  (fuOptions :UINT)
+  (lprc (:pointer RECT))
+  (lpString LPCTSTR)
+  (cbCount :UINT)
+  (lpDx :INT))
+
+(defcfun ("TabbedTextOutW" TabbedTextOut) :LONG
+  (hDC HDC)
+  (x :INT)
+  (y :INT)
+  (lpString LPCTSTR)
+  (nCount :INT)
+  (nTabPositions :INT)
+  (lpnTabStopPositions LPINT)
+  (nTabOrigin :INT))

@@ -35,3 +35,14 @@
   (Msg :UINT)
   (wParam WPARAM)
   (lParam LPARAM))
+
+(defcfun ("PostMessageW" PostMessage) BOOL
+  (hwnd HWND)
+  (msg :UINT)
+  (wParam WPARAM)
+  (lParam LPARAM))
+
+(defcfun ("TranslateAcceleratorW" TranslateAccelerator) :INT
+  (hWnd HWND)
+  (hAccTable HACCEL)
+  (lpMsg LPMSG))

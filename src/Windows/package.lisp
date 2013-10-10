@@ -204,9 +204,13 @@
            #:LPWINDOWPOS
 
            #:RegisterClass
+           #:RegisterClassEx
+           #:UnregisterClass
            #:CreateWindowEx
            #:ShowWindow
            #:UpdateWindow
+           #:DestroyWindow
+           #:IsWindow
            #:DefWindowProc
            #:GetClientRect
            #:GetFocus
@@ -218,6 +222,7 @@
            #:ScreenToClient
            #:ClientToScreen
            #:MoveWindow
+           #:SetWindowPos
            #:SetWindowLong
            #:GetWindowLong
            #:GetParent
@@ -229,6 +234,7 @@
            #:SetClassLong
            #:GetKeyState
            #:CallWindowProc
+           #:SetMenu
 
            #:register-class
            #:create-window-ex))

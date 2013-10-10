@@ -35,6 +35,31 @@
 (defcfun "CloseHandle" BOOL
   (hObject HANDLE))
 
+(defcfun ("WriteConsoleW" WriteConsole) BOOL
+  (hConsoleOutput HANDLE)
+  (lpBuffer :pointer)
+  (nNumberOfCharsToWrite DWORD)
+  (lpNumberOfCharsWritten LPDWORD)
+  (lpReserved LPVOID))
+
+(defcfun "GetDoubleClickTime" :UINT)
+
+(defcfun "SetDoubleClickTime" BOOL
+  (uInterval :UINT))
+
+(defcfun "SetTimer" UINT_PTR
+  (hWnd        HWND)
+  (nIDEvent    UINT_PTR)
+  (uElapse     :UINT)
+  (lpTimerFunc TIMERPROC))
+
+(defcfun "KillTimer" BOOL
+  (hWnd HWND)
+  (uIDEvent UINT_PTR))
+
+(defcfun "GetStdHandle" HANDLE
+  (nStdHandle DWORD))
+
 (defun loword (value)
   (mask-field (byte 16 0) value))
 

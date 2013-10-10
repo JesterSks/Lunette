@@ -24,6 +24,14 @@
 (defctype PPOINT  (:pointer POINT))
 (defctype LPPOINT (:pointer POINT))
 
+(defcstruct tagSIZE
+  (cx :long)
+  (cy :long))
+
+(defctype SIZE   (:struct tagSize))
+(defctype PSIZE  (:pointer SIZE))
+(defctype LPSIZE (:pointer SIZE))
+
 (defcstruct tagNMHDR
   (hWndFrom HWND)
   (idFrom   UINT_PTR)
@@ -31,3 +39,28 @@
 
 (defctype NMHDR   (:struct tagNMHDR))
 (defctype LPNMHDR (:pointer NMHDR))
+
+(defcstruct _NMTTDISPINFO
+  (hdr      NMHDR)
+  (lpszText LPSTR)
+  (szText   WCHAR :count 80)
+  (:hinst    HINSTANCE)
+  (uFlags   :UINT)
+  (:lParam   LPARAM))
+
+(defctype NMTTDISPINFO   (:struct _NMTTDISPINFO))
+(defctype LPNMTTDISPINFO (:pointer NMTTDISPINFO))
+
+(defcstruct _SYSTEMTIME
+  (wYear          WORD)
+  (wMonth         WORD)
+  (wDayOfWeek     WORD)
+  (wDay           WORD)
+  (wHour          WORD)
+  (wMinute        WORD)
+  (wSecond        WORD)
+  (wMilliseconds  WORD))
+
+(defctype SYSTEMTIME   (:struct  _SYSTEMTIME))
+(defctype PSYSTEMTIME  (:pointer SYSTEMTIME))
+(defctype LPSYSTEMTIME (:pointer SYSTEMTIME))

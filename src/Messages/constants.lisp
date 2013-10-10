@@ -252,3 +252,9 @@
 (define-constant WM_PENWINLAST                     #x038F)
 (define-constant WM_USER                           #x0400)
 (define-constant WM_APP                            #x8000)
+
+(define-constant TTN_FIRST        (- 0 520))
+(define-constant TTN_LAST         (- 0 549))
+(define-constant TTN_GETDISPINFOA (mask-field (byte 32 0) (- TTN_FIRST  0)))
+(define-constant TTN_GETDISPINFOW (mask-field (byte 32 0) (- TTN_FIRST 10)))
+(define-constant TTN_GETDISPINFO  TTN_GETDISPINFOW)
