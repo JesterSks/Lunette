@@ -154,6 +154,13 @@
   (hWnd HWND)
   (hMenu HMENU))
 
+(defcfun "ScrollWindow" :int
+  (hWnd HWND)
+  (dx :int)
+  (dy :int)
+  (prcScroll (:pointer RECT))
+  (prcClip (:pointer RECT)))
+
 (defun register-class (class-name &key
                                   (style (logior CS_HREDRAW CS_VREDRAW))
                                   (lpfnWndProc (null-pointer))

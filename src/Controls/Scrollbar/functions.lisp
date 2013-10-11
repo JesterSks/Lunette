@@ -26,3 +26,16 @@
   (fnBar :INT)
   (lpsi LPCSCROLLINFO)
   (fRedraw BOOL))
+
+(defcfun "SetScrollRange" BOOL
+  (hWnd HWND)
+  (nBar :INT)
+  (nMinPos :INT)
+  (nMaxPos :INT)
+  (bRedraw BOOL))
+
+(defcfun "SetScrollPos" :INT
+  (hWnd HWND)
+  (nBar :INT)
+  (nPos :INT)
+  (bRedraw BOOL))

@@ -78,6 +78,5 @@
 
            #:GetScrollInfo
            #:SetScrollInfo
-           #:ScrollWindowEx
            #:SetScrollRange
            #:SetScrollPos))

@@ -235,6 +235,7 @@
            #:GetKeyState
            #:CallWindowProc
            #:SetMenu
+           #:ScrollWindow
 
            #:register-class
            #:create-window-ex))
