@@ -265,6 +265,10 @@
            #:TTN_GETDISPINFOW
            #:TTN_GETDISPINFO
 
+           #:PM_NOREMOVE
+           #:PM_REMOVE
+           #:PM_NOYIELD
+
            #:MSG
            #:hwnd
            #:message
@@ -276,6 +280,7 @@
            #:LPMSG
 
            #:GetMessage
+           #:PeekMessage
            #:TranslateMessage
            #:DispatchMessage
            #:PostQuitMessage

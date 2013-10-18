@@ -258,3 +258,8 @@
 (define-constant TTN_GETDISPINFOA (mask-field (byte 32 0) (- TTN_FIRST  0)))
 (define-constant TTN_GETDISPINFOW (mask-field (byte 32 0) (- TTN_FIRST 10)))
 (define-constant TTN_GETDISPINFO  TTN_GETDISPINFOW)
+
+;;; PeekMessage() Options
+(define-constant PM_NOREMOVE #x0000)
+(define-constant PM_REMOVE   #x0001)
+(define-constant PM_NOYIELD  #x0002)

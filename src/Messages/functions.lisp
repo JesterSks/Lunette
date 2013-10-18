@@ -22,6 +22,13 @@
   (wMsgFilterMin :UINT)
   (wMsgFilterMax :UINT))
 
+(defcfun ("PeekMessageW" PeekMessage) BOOL
+  (lpMsg         LPMSG)
+  (hWnd          HWND)
+  (wMsgFilterMin :UINT)
+  (wMsgFilterMax :UINT)
+  (wRemoveMsg    :UINT))
+
 (defcfun "TranslateMessage" BOOL
   (lpMsg LPMSG))
 
