@@ -69,3 +69,17 @@
 (defun makelong (a b)
   (logior (mask-field (byte 16 0) a)
           (ash (mask-field (byte 16 0) b) 16)))
+
+(defun create-resource-path (module name)
+  (when (asdf:find-system :lunette-examples nil)
+    (let* ((system-root-path (asdf:system-source-directory :lunette-examples))
+           (system-root (pathname-directory system-root-path))
+           (module-dir (pathname-directory (parse-namestring module)))
+           (dll-path (parse-namestring name)))
+      (make-pathname :host (pathname-host system-root-path)
+                     :directory (append system-root (cdr module-dir))
+                     :name (pathname-name dll-path)
+                     :type (pathname-type dll-path)))))
+
+(defun make-int-resource (val)
+  (make-pointer val))

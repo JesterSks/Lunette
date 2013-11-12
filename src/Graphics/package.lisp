@@ -251,4 +251,5 @@
            #:SetWorldTransform
            #:SetGraphicsMode
            #:SetWindowExtEx
-           #:ImageList_Create))
+           #:ImageList_Create
+           #:DrawIcon))

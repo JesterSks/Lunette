@@ -250,4 +250,5 @@
 
            #:loword
            #:hiword
-           #:makelong))
+           #:makelong
+           #:create-resource-path))

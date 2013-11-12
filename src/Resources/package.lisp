@@ -20,9 +20,13 @@
   (:import-from :cffi
                 #:defcfun
                 #:make-pointer
-                #:pointer-eq)
+                #:pointer-eq
+                #:with-foreign-string
+                #:null-pointer-p)
   (:import-from :alexandria
                 #:define-constant)
+  (:import-from :Lunette.Errors
+                #:get-last-error)
   (:export #:IDI_APPLICATION
            #:IDI_HAND
            #:IDI_QUESTION
@@ -63,4 +67,6 @@
            #:LoadResource
            #:LoadLibrary
            #:LoadMenu
-           #:LoadAccelerators))
+           #:LoadAccelerators
+           #:load-library
+           #:with-library))

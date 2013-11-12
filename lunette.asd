@@ -52,7 +52,7 @@
              (:file "constants"   :depends-on ("package"))
              (:file "functions"   :depends-on ("package"))))
    (:module "src/Resources"
-            :depends-on ("src/System")
+            :depends-on ("src/System", "src/Errors")
             :components
             ((:file "package")
              (:file "constants"   :depends-on ("package"))

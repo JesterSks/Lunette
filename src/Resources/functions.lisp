@@ -69,3 +69,20 @@
 (defcfun ("LoadAcceleratorsW" LoadAccelerators) HACCEL
   (hInstance HINSTANCE)
   (lpTableName LPCTSTR))
+
+(defun load-library (fname path)
+  (with-foreign-string (cStrPath (namestring (create-resource-path path fname)))
+    (let ((lib (LoadLibrary cStrPath)))
+      (when (null-pointer-p lib)
+        (multiple-value-bind (error-code error-msg) (get-last-error)
+          (error "Error loading library (DLL) ~s: ~d (~a)"
+                 fname
+                 error-code
+                 error-name)))
+      lib)))
+
+(defmacro with-library ((asymbol fname path) &body body)
+  `(let ((,asymbol (load-library ,fname ,path)))
+     (unwind-protect
+          (progn ,@body)
+       (FreeLibrary ,asymbol))))

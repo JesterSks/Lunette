@@ -330,3 +330,9 @@
   (flags    :UINT)
   (cInitial :INT)
   (cGrow    :INT))
+
+(defcfun "DrawIcon" BOOL
+  (hDC   HDC)
+  (X     :INT)
+  (Y     :INT)
+  (hIcon HICON))
