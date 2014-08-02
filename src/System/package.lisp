@@ -45,8 +45,12 @@
            #:HGLOBAL
            #:HACCEL
            #:HIMAGELIST
+           #:HGLRC
 
            #:WNDPROC
+           #:PROC
+           #:FARPROC
+           #:NEARPROC
 
            #:HINSTANCE
            #:HMODULE

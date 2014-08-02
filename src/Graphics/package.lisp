@@ -197,6 +197,36 @@
            #:eDy
            #:LPXFORM
 
+           #:PIXELFORMATDESCRIPTOR
+           #:nSize
+           #:nVersion
+           #:dwFlags
+           #:iPixelType
+           #:cColorBits
+           #:cRedBits
+           #:cRedShift
+           #:cGreenBits
+           #:cGreenShift
+           #:cBlueBits
+           #:cBlueShift
+           #:cAlphaBits
+           #:cAlphaShift
+           #:cAccumBits
+           #:cAccumRedBits
+           #:cAccumGreenBits
+           #:cAccumBlueBits
+           #:cAccumAlphaBits
+           #:cDepthBits
+           #:cStencilBits
+           #:cAuxBuffers
+           #:iLayerType
+           #:bReserved
+           #:dwLayerMask
+           #:dwVisibleMask
+           #:dwDamageMask
+           #:PPIXELFORMATDESCRIPTOR
+           #:LPPIXELFORMATDESCRIPTOR
+
            #:GetStockObject
            #:BeginPaint
            #:EndPaint

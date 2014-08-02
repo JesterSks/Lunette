@@ -22,7 +22,7 @@
 
 (defsystem lunette
   :version "0.0.1"
-  :description "CFFI Wrappers for common 32-bit Win32 (R) functions."
+  :description "CFFI Wrappers for common 32-bit Win32® functions."
   :author "Robert Burghart <JesterSks@gmail.com>"
   :maintainer "Robert Burghart <JesterSks@gmail.com>"
   :license "Apache License Version 2.0"
@@ -220,4 +220,9 @@
             :depends-on ("src/Messages" "src/Windows" "src/Graphics")
             :components
             ((:file "package")
-             (:file "libraries"   :depends-on ("package"))))))
+             (:file "libraries"   :depends-on ("package"))))
+   (:module "src/Graphics/wgl"
+            :depends-on ("src/System")
+            :components
+            ((:file "package")
+             (:file "functions" :depends-on ("package"))))))
