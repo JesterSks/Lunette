@@ -171,3 +171,32 @@
 (define-constant ODS_INACTIVE     #x0080)
 (define-constant ODS_NOACCEL      #x0100)
 (define-constant ODS_NOFOCUSRECT  #x0200)
+
+;;;pixel format descriptor constants
+(define-constant PFD_TYPE_RGBA        0)
+(define-constant PFD_TYPE_COLORINDEX  1)
+
+(define-constant PFD_MAIN_PLANE       0)
+(define-constant PFD_OVERLAY_PLANE    1)
+(define-constant PFD_UNDERLAY_PLANE   -1)
+
+(define-constant PFD_DOUBLEBUFFER            #x00000001)
+(define-constant PFD_STEREO                  #x00000002)
+(define-constant PFD_DRAW_TO_WINDOW          #x00000004)
+(define-constant PFD_DRAW_TO_BITMAP          #x00000008)
+(define-constant PFD_SUPPORT_GDI             #x00000010)
+(define-constant PFD_SUPPORT_OPENGL          #x00000020)
+(define-constant PFD_GENERIC_FORMAT          #x00000040)
+(define-constant PFD_NEED_PALETTE            #x00000080)
+(define-constant PFD_NEED_SYSTEM_PALETTE     #x00000100)
+(define-constant PFD_SWAP_EXCHANGE           #x00000200)
+(define-constant PFD_SWAP_COPY               #x00000400)
+(define-constant PFD_SWAP_LAYER_BUFFERS      #x00000800)
+(define-constant PFD_GENERIC_ACCELERATED     #x00001000)
+(define-constant PFD_SUPPORT_DIRECTDRAW      #x00002000)
+(define-constant PFD_DIRECT3D_ACCELERATED    #x00004000)
+(define-constant PFD_SUPPORT_COMPOSITION     #x00008000)
+
+(define-constant PFD_DEPTH_DONTCARE          #x20000000)
+(define-constant PFD_DOUBLEBUFFER_DONTCARE   #x40000000)
+(define-constant PFD_STEREO_DONTCARE         #x80000000)

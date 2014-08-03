@@ -29,6 +29,8 @@
                 #:use-foreign-library
                 #:with-foreign-strings
                 #:with-foreign-object
-                #:foreign-slot-value)
+                #:foreign-slot-value
+                #:mem-ref
+                #:foreign-string-to-lisp)
   (:import-from :alexandria
                 #:define-constant))

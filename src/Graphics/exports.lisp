@@ -162,6 +162,34 @@
           ODS_NOACCEL
           ODS_NOFOCUSRECT
 
+          PFD_TYPE_RGBA
+          PFD_TYPE_COLORINDEX
+
+          PFD_MAIN_PLANE
+          PFD_OVERLAY_PLANE
+          PFD_UNDERLAY_PLANE
+
+          PFD_DOUBLEBUFFER
+          PFD_STEREO
+          PFD_DRAW_TO_WINDOW
+          PFD_DRAW_TO_BITMAP
+          PFD_SUPPORT_GDI
+          PFD_SUPPORT_OPENGL
+          PFD_GENERIC_FORMAT
+          PFD_NEED_PALETTE
+          PFD_NEED_SYSTEM_PALETTE
+          PFD_SWAP_EXCHANGE
+          PFD_SWAP_COPY
+          PFD_SWAP_LAYER_BUFFERS
+          PFD_GENERIC_ACCELERATED
+          PFD_SUPPORT_DIRECTDRAW
+          PFD_DIRECT3D_ACCELERATED
+          PFD_SUPPORT_COMPOSITION
+
+          PFD_DEPTH_DONTCARE
+          PFD_DOUBLEBUFFER_DONTCARE
+          PFD_STEREO_DONTCARE
+
           RECT
           left
           top
@@ -287,4 +315,6 @@
           SetWindowExtEx
           ImageList_Create
           ChoosePixelFormat
-          GetPixelFormat))
+          GetPixelFormat
+          SetPixelFormat
+          SwapBuffers))

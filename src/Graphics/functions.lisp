@@ -333,7 +333,15 @@
 
 (defcfun "ChoosePixelFormat" :int
   (hdc HDC)
-  (ppfd (:pointer PIXELFORMATDESCRIPTOR))
+  (ppfd (:pointer PIXELFORMATDESCRIPTOR)))
 
 (defcfun "GetPixelFormat" :int
   (hdc  HDC))
+
+(defcfun "SetPixelFormat" BOOL
+  (hdc          HDC)
+  (iPixelFormat :int)
+  (ppfd         (:pointer PIXELFORMATDESCRIPTOR)))
+
+(defcfun "SwapBuffers" BOOL
+  (hdc HDC))
