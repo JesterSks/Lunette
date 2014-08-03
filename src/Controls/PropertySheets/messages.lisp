@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.PropertySheets)
+(in-package :Lunette)
 
 (define-constant PSN_FIRST (- 0 200))
 (define-constant PSN_LAST  (- 0 299))

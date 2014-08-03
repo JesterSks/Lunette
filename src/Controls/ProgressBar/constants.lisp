@@ -14,6 +14,6 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.ProgressBar)
+(in-package :Lunette)
 
 (define-constant PROGRESS_CLASS "msctls_progress32" :test #'string=)

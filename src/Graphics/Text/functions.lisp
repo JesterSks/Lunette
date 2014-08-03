@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Graphics.Text)
+(in-package :Lunette)
 
 (defcfun ("TextOutW" TextOut) BOOL
   (hdc HDC)

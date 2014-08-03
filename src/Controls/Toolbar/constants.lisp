@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Toolbar)
+(in-package :Lunette)
 
 (define-constant TOOLBARCLASSNAME "ToolbarWindow32" :test #'string=)
 

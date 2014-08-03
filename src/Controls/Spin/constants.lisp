@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Spin)
+(in-package :Lunette)
 
 (define-constant UPDOWN_CLASS   "msctls_updown32" :test #'string=)
 

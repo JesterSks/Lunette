@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.ListBox)
+(in-package :Lunette)
 
 ;;; Listbox Return Values
 (define-constant LB_OKAY      0)

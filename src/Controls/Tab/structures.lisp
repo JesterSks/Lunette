@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Tab)
+(in-package :Lunette)
 
 (defcstruct _TCITEM
   (mask        :UINT)
@@ -23,7 +23,7 @@
   (pszText     LPSTR)
   (cchTextMax  :INT)
   (iImage      :INT)
-  (:lParam      LPARAM))
+  (lParam      LPARAM))
 
 (defctype TCITEM (:struct _TCITEM))
 (defctype LPTCITEM (:pointer TCITEM))

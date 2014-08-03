@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Resources)
+(in-package :Lunette)
 
 (defcfun ("LoadIconW" LoadIcon) HICON
   (hInstance  HINSTANCE)

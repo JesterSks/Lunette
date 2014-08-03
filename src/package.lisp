@@ -17,69 +17,18 @@
 (defpackage :Lunette
   (:use #:common-lisp)
   (:import-from :cffi
+                #:defcfun
+                #:defctype
+                #:defcstruct
+                #:defcunion
+                #:null-pointer
+                #:null-pointer-p
+                #:make-pointer
+                #:pointer-eq
                 #:define-foreign-library
-                #:use-foreign-library)
-  (:import-from :Lunette.System
-                #:LRESULT
-                #:HWND
-                #:WPARAM
-                #:LPARAM)
-  (:import-from :Lunette.Messages
-                #:WM_DESTROY
-                #:WM_PAINT
-
-                #:MSG
-
-                #:GetMessage
-                #:TranslateMessage
-                #:DispatchMessage
-                #:PostQuitMessage)
-  (:import-from :Lunette.Windows
-                #:SW_SHOW
-
-                #:ShowWindow
-                #:UpdateWindow
-                #:DefWindowProc
-
-                #:register-class
-                #:create-window-ex)
-  (:import-from :Lunette.Graphics
-                #:PAINTSTRUCT
-
-                #:BeginPaint
-                #:EndPaint
-
-                #:with-ps)
-  (:import-from :Lunette.Graphics.Text
-                #:text-out)
-  (:export #:LRESULT
-           #:HWND
-           #:WPARAM
-           #:LPARAM
-
-           #:WM_DESTROY
-           #:WM_PAINT
-
-           #:MSG
-
-           #:GetMessage
-           #:TranslateMessage
-           #:DispatchMessage
-           #:PostQuitMessage
-
-           #:SW_SHOW
-
-           #:ShowWindow
-           #:UpdateWindow
-           #:DefWindowProc
-
-           #:register-class
-           #:create-window-ex
-
-           #:PAINTSTRUCT
-
-           #:BeginPaint
-           #:EndPaint
-
-           #:with-ps
-           #:text-out))
+                #:use-foreign-library
+                #:with-foreign-strings
+                #:with-foreign-object
+                #:foreign-slot-value)
+  (:import-from :alexandria
+                #:define-constant))

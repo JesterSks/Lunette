@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Toolbar)
+(in-package :Lunette)
 
 ;;; COMCTRL32
 (define-constant TB_ENABLEBUTTON          (+ WM_USER  1))

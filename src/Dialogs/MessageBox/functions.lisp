@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Dialogs.MessageBox)
+(in-package :Lunette)
 
 (defcfun ("MessageBoxW" MessageBox) :INT
   (hWnd HWND)

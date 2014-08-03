@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Errors)
+(in-package :Lunette)
 
 (defcfun "GetLastError" DWORD)
 

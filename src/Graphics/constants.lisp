@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Graphics)
+(in-package :Lunette)
 
 ;;; Built-in GDI Objects
 (define-constant WHITE_BRUSH          0)

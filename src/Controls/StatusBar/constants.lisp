@@ -14,6 +14,6 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.StatusBar)
+(in-package :Lunette)
 
 (define-constant STATUSCLASSNAME "msctls_statusbar32" :test #'string=)

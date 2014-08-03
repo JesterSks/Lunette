@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Messages)
+(in-package :Lunette)
 
 (defcstruct tagMSG
   (hwnd    HWND)

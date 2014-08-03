@@ -14,10 +14,10 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Scrollbar)
+(in-package :Lunette)
 
 (defcstruct tagSCROLLINFO
-  (:cbSize    :UINT)
+  (cbSize    :UINT)
   (fMask     :UINT)
   (nMin      :INT)
   (nMax      :INT)

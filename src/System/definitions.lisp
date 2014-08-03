@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.System)
+(in-package :Lunette)
 
 (defctype PVOID   :pointer)
 (defctype LPVOID  :pointer)

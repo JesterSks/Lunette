@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Windows)
+(in-package :Lunette)
 
 (defcfun ("RegisterClassW" RegisterClass) W32-ATOM
   (lpwcx (:pointer WNDCLASS)))

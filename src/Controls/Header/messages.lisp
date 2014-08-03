@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Header)
+(in-package :Lunette)
 
 (define-constant HDM_FIRST                            #x1200)
 (define-constant HDM_GETITEMCOUNT           (+ HDM_FIRST  0))

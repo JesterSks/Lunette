@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Trackbar)
+(in-package :Lunette)
 
 (define-constant TRACKBAR_CLASS "msctls_trackbar32" :test #'string=)
 

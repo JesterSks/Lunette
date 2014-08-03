@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Resources)
+(in-package :Lunette)
 
 ;;; Built-in Icons
 (define-constant IDI_APPLICATION (make-pointer 32512) :test #'pointer-eq)

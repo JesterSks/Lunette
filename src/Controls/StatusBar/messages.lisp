@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.StatusBar)
+(in-package :Lunette)
 
 (define-constant SB_SETTEXTA         (+ WM_USER  1))
 (define-constant SB_SETTEXTW         (+ WM_USER 11))

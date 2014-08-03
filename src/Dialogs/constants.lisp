@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Dialogs)
+(in-package :Lunette)
 
 ;;; Dialog Box Command IDs
 (define-constant IDOK       1)

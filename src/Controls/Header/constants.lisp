@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Header)
+(in-package :Lunette)
 
 (define-constant WC_HEADER "SysHeader32" :test #'string=)
 

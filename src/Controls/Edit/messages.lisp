@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Edit)
+(in-package :Lunette)
 
 ;;; Edit Control Notification Codes
 (define-constant EN_SETFOCUS     #x0100)

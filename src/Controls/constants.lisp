@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette)
 
 (define-constant ICC_LISTVIEW_CLASSES   #x00000001)
 (define-constant ICC_TREEVIEW_CLASSES   #x00000002)

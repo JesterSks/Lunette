@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette)
 
 (define-constant CCM_FIRST                     #x2000)
 (define-constant CCM_SETBKCOLOR       (+ CCM_FIRST 1))

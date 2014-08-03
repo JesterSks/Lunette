@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.System)
+(in-package :Lunette)
 
 (defcfun "GetSystemMetrics" :int
   (nIndex :int))

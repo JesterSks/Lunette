@@ -14,23 +14,30 @@
    limitations under the License.
 |#
 
-(defpackage :Lunette.Controls.ProgressBar
-  (:use :common-lisp)
-  (:import-from :alexandria
-                #:define-constant)
-  (:import-from :Lunette.Messages
-                #:WM_USER)
-  (:import-from :Lunette.Controls
-                #:CCM_SETBKCOLOR)
-  (:export #:PROGRESS_CLASS
+(in-package :Lunette)
 
-           #:PBM_SETRANGE
-           #:PBM_SETPOS
-           #:PBM_DELTAPOS
-           #:PBM_SETSTEP
-           #:PBM_STEPIT
-           #:PBM_SETRANGE32
-           #:PBM_GETRANGE
-           #:PBM_GETPOS
-           #:PBM_SETBARCOLOR
-           #:PBM_SETBKCOLOR))
+(export '(ES_LEFT
+          ES_CENTER
+          ES_RIGHT
+          ES_MULTILINE
+          ES_UPPERCASE
+          ES_LOWERCASE
+          ES_PASSWORD
+          ES_AUTOVSCROLL
+          ES_AUTOHSCROLL
+          ES_NOHIDESEL
+          ES_OEMCONVERT
+          ES_READONLY
+          ES_WANTRETURN
+          ES_NUMBER
+
+          EN_SETFOCUS
+          EN_KILLFOCUS
+          EN_CHANGE
+          EN_UPDATE
+          EN_ERRSPACE
+          EN_MAXTEXT
+          EN_HSCROLL
+          EN_VSCROLL
+          EN_ALIGN_LTR_EC
+          EN_ALIGN_RTL_EC))

@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.TreeView)
+(in-package :Lunette)
 
 (defcstruct tagTVITEMEX
   (mask            :UINT)
@@ -26,7 +26,7 @@
   (iImage          :INT)
   (iSelectedImage  :INT)
   (cChildren       :INT)
-  (:lParam         LPARAM)
+  (lParam          LPARAM)
   (iIntegral       :INT)
   (uStateEx        :UINT)
   (hwnd            HWND)
@@ -46,7 +46,7 @@
   (iImage            :INT)
   (iSelectedImage    :INT)
   (cChildren         :INT)
-  (:lParam           LPARAM))
+  (lParam           LPARAM))
 
 (defctype TVITEM (:struct tagTVITEM))
 (defctype LPTVITEM (:pointer TVITEM))

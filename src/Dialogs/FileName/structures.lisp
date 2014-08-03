@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Dialogs.FileName)
+(in-package :Lunette)
 
 (defcstruct tagOFN
   (lStructSize       DWORD)

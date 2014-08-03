@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Memory)
+(in-package :Lunette)
 
 (defcfun "LocalFree" HLOCAL
   (hMem HLOCAL))

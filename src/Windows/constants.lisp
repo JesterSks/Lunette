@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Windows)
+(in-package :Lunette)
 
 ;;; Window Class Constants
 (define-constant CS_VREDRAW         #x0001)

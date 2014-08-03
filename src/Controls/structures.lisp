@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls)
+(in-package :Lunette)
 
 (defcstruct tagINITCOMMONCONTROLSEX
   (dwSize DWORD)

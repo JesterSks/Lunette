@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Spin)
+(in-package :Lunette)
 
 (define-constant UDM_SETRANGE            (+ WM_USER 101))
 (define-constant UDM_GETRANGE            (+ WM_USER 102))

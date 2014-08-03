@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Calendar)
+(in-package :Lunette)
 
 (define-constant MONTHCAL_CLASS "SysMonthCal32" :test #'string=)
 

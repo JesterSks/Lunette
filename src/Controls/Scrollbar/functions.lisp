@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Scrollbar)
+(in-package :Lunette)
 
 (defcfun "GetScrollInfo" BOOL
   (hwnd HWND)

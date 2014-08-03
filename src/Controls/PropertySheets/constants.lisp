@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.PropertySheets)
+(in-package :Lunette)
 
 (define-constant PSP_DEFAULT           #x00000000)
 (define-constant PSP_DLGINDIRECT       #x00000001)

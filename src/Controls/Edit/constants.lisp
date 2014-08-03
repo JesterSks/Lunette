@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Edit)
+(in-package :Lunette)
 
 ;;; Edit Control Styles
 (define-constant ES_LEFT        #x0000)

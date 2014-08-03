@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Tab)
+(in-package :Lunette)
 
 (define-constant WC_TABCONTROL "SysTabControl32" :test #'string=)
 

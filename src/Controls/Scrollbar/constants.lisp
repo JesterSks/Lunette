@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Scrollbar)
+(in-package :Lunette)
 
 ;;; Scroll Bar Constants
 (define-constant SB_HORZ 0)

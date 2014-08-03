@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.PropertySheets)
+(in-package :Lunette)
 
 (defcunion DUMMYUNION1
   (pszTemplate LPCWSTR)

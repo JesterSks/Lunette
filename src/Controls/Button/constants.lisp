@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Button)
+(in-package :Lunette)
 
 ;;; Button Control Styles
 (define-constant BS_PUSHBUTTON       #x00000000)

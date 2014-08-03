@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Messages)
+(in-package :Lunette)
 
 ;;; Window Message Constants
 (define-constant WM_NULL                           #x0000)

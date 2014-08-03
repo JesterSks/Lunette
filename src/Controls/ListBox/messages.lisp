@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.ListBox)
+(in-package :Lunette)
 
 ;;; Listbox messages
 (define-constant LB_ADDSTRING            #x0180)

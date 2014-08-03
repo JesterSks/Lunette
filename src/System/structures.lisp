@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.System)
+(in-package :Lunette)
 
 (defcstruct tagPOINT
   (x :long)
@@ -44,9 +44,9 @@
   (hdr      NMHDR)
   (lpszText LPSTR)
   (szText   WCHAR :count 80)
-  (:hinst    HINSTANCE)
+  (hinst    HINSTANCE)
   (uFlags   :UINT)
-  (:lParam   LPARAM))
+  (lParam   LPARAM))
 
 (defctype NMTTDISPINFO   (:struct _NMTTDISPINFO))
 (defctype LPNMTTDISPINFO (:pointer NMTTDISPINFO))

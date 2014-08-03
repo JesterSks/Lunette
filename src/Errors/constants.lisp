@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Errors)
+(in-package :Lunette)
 
 (define-constant FORMAT_MESSAGE_ALLOCATE_BUFFER #x00000100)
 (define-constant FORMAT_MESSAGE_FROM_SYSTEM     #x00001000)

@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Graphics.Text)
+(in-package :Lunette)
 
 ;;; Font Weights
 (define-constant FW_DONTCARE   0)

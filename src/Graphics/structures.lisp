@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Graphics)
+(in-package :Lunette)
 
 (defcstruct _RECT
   (left   :long)

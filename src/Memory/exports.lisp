@@ -1,5 +1,5 @@
 #|
-   Copyright 2014 Robert Burghart
+   Copyright 2013 Robert Burghart
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -13,13 +13,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 |#
-(defpackage :Lunette.Graphics.wgl
-  (:use #:common-lisp
-        #:Lunette.System)
-  (:import-from :cffi
-                #:defcfun)
-  (:export #:wglCreateContext
-           #:wglDeleteContext
-           #:wglGetCurrentContext
-           #:wglGetCurrentDC
-           #:wglMakeCurrent))
+
+(in-package :Lunette)
+
+(export 'LocalFree)

@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Dialogs.FileName)
+(in-package :Lunette)
 
 (defcfun ("GetOpenFileNameW" GetOpenFileName) BOOL
   (lpofn LPOPENFILENAME))

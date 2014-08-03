@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.VirtualKeys)
+(in-package :Lunette)
 
 ;;; Virtual Keys, Standard Set
 (define-constant VK_LBUTTON        #x01)

@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Files)
+(in-package :Lunette)
 
 (defcfun ("GetCurrentDirectoryW" GetCurrentDirectory) DWORD
   (nBufferLength DWORD)

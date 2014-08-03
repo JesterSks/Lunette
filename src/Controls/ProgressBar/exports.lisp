@@ -14,10 +14,17 @@
    limitations under the License.
 |#
 
-(defpackage :Lunette.Memory
-  (:use #:common-lisp)
-  (:import-from :cffi
-                #:defcfun)
-  (:import-from :Lunette.System
-                #:HLOCAL)
-  (:export #:LocalFree))
+(in-package :Lunette)
+
+(export '(PROGRESS_CLASS
+
+          PBM_SETRANGE
+          PBM_SETPOS
+          PBM_DELTAPOS
+          PBM_SETSTEP
+          PBM_STEPIT
+          PBM_SETRANGE32
+          PBM_GETRANGE
+          PBM_GETPOS
+          PBM_SETBARCOLOR
+          PBM_SETBKCOLOR))

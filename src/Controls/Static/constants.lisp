@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Static)
+(in-package :Lunette)
 
 ;;; Static Control Constants
 (define-constant SS_LEFT             #x00000000)

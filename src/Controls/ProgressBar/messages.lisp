@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.ProgressBar)
+(in-package :Lunette)
 
 (define-constant PBM_SETRANGE             (+ WM_USER 1))
 (define-constant PBM_SETPOS               (+ WM_USER 2))

@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Trackbar)
+(in-package :Lunette)
 
 (define-constant TB_LINEUP        0)
 (define-constant TB_LINEDOWN      1)

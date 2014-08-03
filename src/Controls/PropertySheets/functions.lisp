@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.PropertySheets)
+(in-package :Lunette)
 
 (defcfun ("CreatePropertySheetPageW" CreatePropertySheetPage) HPROPSHEETPAGE
   (lppsp LPCPROPSHEETPAGE))

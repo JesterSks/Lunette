@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Windows)
+(in-package :Lunette)
 
 (defcstruct tagWNDCLASS
   (style         :UINT)
@@ -32,7 +32,7 @@
 (defctype PWNDCLASS (:pointer WNDCLASS))
 
 (defcstruct tagWNDCLASSEX
-  (:cbSize       :UINT)
+  (cbSize       :UINT)
   (style         :UINT)
   (lpfnWndProc   WNDPROC)
   (cbClsExtra    :INT)
@@ -55,7 +55,7 @@
   (y               :INT)
   (cx              :INT)
   (cy              :INT)
-  (:flags          :INT))
+  (flags          :INT))
 
 (defctype WINDOWPOS (:struct tagWINDOWPOS))
 (defctype LPWINDOWPOS (:pointer WINDOWPOS))

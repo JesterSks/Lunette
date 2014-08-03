@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Dialogs.MessageBox)
+(in-package :Lunette)
 
 ;;; MessageBox() Flags
 (define-constant MB_OK                        #x00000000)

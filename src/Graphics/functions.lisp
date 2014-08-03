@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Graphics)
+(in-package :Lunette)
 
 (defcfun "GetStockObject" HGDIOBJ
   (fnObject :int))
@@ -330,3 +330,10 @@
   (flags    :UINT)
   (cInitial :INT)
   (cGrow    :INT))
+
+(defcfun "ChoosePixelFormat" :int
+  (hdc HDC)
+  (ppfd (:pointer PIXELFORMATDESCRIPTOR))
+
+(defcfun "GetPixelFormat" :int
+  (hdc  HDC))

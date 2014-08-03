@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.TreeView)
+(in-package :Lunette)
 
 (define-constant WC_TREEVIEW "SysTreeView32" :test #'string=)
 

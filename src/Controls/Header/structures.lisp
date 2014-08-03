@@ -14,21 +14,21 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Header)
+(in-package :Lunette)
 
 (defcstruct _HD_ITEM
-  (:mask       :UINT)
-  (cxy         :INT)
-  (:pszText    LPWSTR)
-  (hbm         HBITMAP)
-  (:cchTextMax :INT)
-  (fmt         :INT)
-  (lParam      LPARAM)
-  (:iImage     :INT)
-  (iOrder      :INT)
-  (type        :UINT)
-  (pvFilter    :pointer)
-  (:state      :UINT))
+  (mask       :UINT)
+  (cxy        :INT)
+  (pszText    LPWSTR)
+  (hbm        HBITMAP)
+  (cchTextMax :INT)
+  (fmt        :INT)
+  (lParam     LPARAM)
+  (iImage     :INT)
+  (iOrder     :INT)
+  (type       :UINT)
+  (pvFilter   :pointer)
+  (state      :UINT))
 
 (defctype HDITEM (:struct _HD_ITEM))
 (defctype LPHDITEM (:pointer HDITEM))

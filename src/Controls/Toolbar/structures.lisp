@@ -14,7 +14,7 @@
    limitations under the License.
 |#
 
-(in-package :Lunette.Controls.Toolbar)
+(in-package :Lunette)
 
 (defcstruct _TBBUTTON
   (iBitmap   :INT)
