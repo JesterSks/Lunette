@@ -199,6 +199,7 @@
           text-out
           GetTextMetrics
           CreateFont
+          create-font
           CreateCaret
           SetCaretPos
           ShowCaret

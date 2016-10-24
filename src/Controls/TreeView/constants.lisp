@@ -45,10 +45,10 @@
 (define-constant TVS_EX_DIMMEDCHECKBOXES     #x0200)
 (define-constant TVS_EX_DRAWIMAGEASYNC       #x0400)
 
-(define-constant TVI_ROOT  (make-pointer (mask-field (byte 32 0) (- #x10000))) :test #'pointerp)
-(define-constant TVI_FIRST (make-pointer (mask-field (byte 32 0) (- #x0FFFF))) :test #'pointerp)
-(define-constant TVI_LAST  (make-pointer (mask-field (byte 32 0) (- #x0FFFE))) :test #'pointerp)
-(define-constant TVI_SORT  (make-pointer (mask-field (byte 32 0) (- #x0FFFD))) :test #'pointerp)
+(define-constant TVI_ROOT  (make-pointer (mask-field (byte 32 0) (- #x10000))) :test #'pointer-eq)
+(define-constant TVI_FIRST (make-pointer (mask-field (byte 32 0) (- #x0FFFF))) :test #'pointer-eq)
+(define-constant TVI_LAST  (make-pointer (mask-field (byte 32 0) (- #x0FFFE))) :test #'pointer-eq)
+(define-constant TVI_SORT  (make-pointer (mask-field (byte 32 0) (- #x0FFFD))) :test #'pointer-eq)
 
 (define-constant TVIF_TEXT          #x0001)
 (define-constant TVIF_IMAGE         #x0002)

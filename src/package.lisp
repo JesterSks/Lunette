@@ -28,6 +28,7 @@
                 #:define-foreign-library
                 #:use-foreign-library
                 #:with-foreign-strings
+                #:with-foreign-string
                 #:with-foreign-object
                 #:foreign-slot-value
                 #:mem-ref
